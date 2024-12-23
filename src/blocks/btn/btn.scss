@@ -1,0 +1,76 @@
+.btn {
+
+  $block-name:                &; // #{$block-name}__element
+
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 32px;
+  margin: 0;
+  padding: 0 $field-padding-horizontal;
+  font-size: $font-size-sm;
+  font-weight: 500;
+  font-family: inherit;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.224px;
+  white-space: nowrap;
+  color: $grey-400;
+  background-color: $main-color;
+  background-image: none;
+  border: 1px solid $main-color;
+  border-radius: $border-radius--lg;
+  user-select: none;
+  cursor: pointer;
+  transition: all $transition-time;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $grey-400;
+    background-color: $main-dark;
+    border-color: $main-dark;
+  }
+
+  //&:active,
+  //&:focus {
+    // @include field-focus;
+  //}
+
+  &--disabled,
+  &:disabled {
+    // opacity: $opacity;
+    cursor: not-allowed;
+    color: $grey-300;
+    background-color: $grey-200;
+    border-color: $grey-200;
+
+    @at-root a.btn--disabled {
+      pointer-events: none;
+    }
+  }
+
+  &--outline {
+    color: $main-color;
+    background-color: transparent;
+    border-color: $main-color;
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+      background-color: $secondary-light;
+      border-color: $main-color;
+    }
+
+    &--disabled,
+    &:disabled {
+      color: $grey-300;
+      background-color: transparent;
+      border-color: $grey-300;
+    }
+  }
+}
