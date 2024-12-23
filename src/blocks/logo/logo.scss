@@ -1,0 +1,13 @@
+.logo {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+
+  img {
+    width: 141px;
+    height: 48px;
+  }
+}
