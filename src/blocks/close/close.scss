@@ -1,48 +1,52 @@
-// В этом файле должны быть стили для БЭМ-блока close, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
-$toggler-part-height:         3px !default;
-$toggler-part-bg-color:       #000 !default;
-
 .close {
 
   $block-name:                &; // #{$block-name}__element
 
-  position: relative;
-  z-index: 1;
+  // position: relative;
+  // z-index: 1;
   display: flex;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  color: $text-color;
+  background-color: transparent;
+  border: none;
   user-select: none;
   cursor: pointer;
+  transition: color $transition-time;
 
-  > span {
-    display: inline-block;
-    width: 100%;
-    height: $toggler-part-height;
-    background: transparent;
-    position: relative;
-
-    &:before,
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: $toggler-part-height;
-      background: $toggler-part-bg-color;
-      transform-origin: 50% 50%;
-    }
-
-    &:before {
-      transform: rotate3d(0, 0, 1, 45deg);
-    }
-
-    &:after {
-      transform: rotate3d(0, 0, 1, -45deg);
-    }
+  &:hover,
+  &:focus {
+    color: $main-color;
   }
+
+  // > span {
+  //   display: inline-block;
+  //   width: 100%;
+  //   height: $toggler-part-height;
+  //   background: transparent;
+  //   position: relative;
+
+  //   &::before,
+  //   &::after {
+  //     content: '';
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: $toggler-part-height;
+  //     background: $text-color;
+  //     transform-origin: 50% 50%;
+  //   }
+
+  //   &::before {
+  //     transform: rotate3d(0, 0, 1, 45deg);
+  //   }
+
+  //   &::after {
+  //     transform: rotate3d(0, 0, 1, -45deg);
+  //   }
+  // }
 }

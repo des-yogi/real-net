@@ -28,7 +28,10 @@
     "tabs": [],
     "to-top": [],
     "typo": [],
-    "hero": []
+    "hero": [],
+    "mob-nav": [],
+    "social-links": [],
+    "copyrights": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

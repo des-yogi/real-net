@@ -1,0 +1,168 @@
+<!--DEV
+@ @include('blocks/mob-nav/mob-nav.html')
+-->
+
+<div class="offcanvas offcanvas-end  mob-nav" tabindex="-1" id="mobNav" aria-labelledby="mobNavLabel">
+  <div class="offcanvas-header  mob-nav__header">
+    <p class="offcanvas-title  mob-nav__title" id="mobNavLabel">Меню</p>
+    <button type="button" class="close" data-bs-dismiss="offcanvas" aria-label="Close">
+      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close-bold"></use></svg>
+    </button>
+  </div>
+
+  <div class="offcanvas-body  mob-nav__body">
+
+    <ul class="list-nostyled  mob-nav__service-list">
+      <li class="mob-nav__service-item">
+        <a href="#" class="mob-nav__service-link">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#router"></use></svg>
+          <span>Підключитися</span>
+        </a>
+      </li>
+      <li class="mob-nav__service-item">
+        <a href="#" class="mob-nav__service-link">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#account"></use></svg>
+          <span>Особистий кабінет</span>
+        </a>
+      </li>
+      <li class="mob-nav__service-item">
+        <a href="#" class="mob-nav__service-link">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#battery"></use></svg>
+          <span>Інтернет без світла</span>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="list-nostyled  mob-nav__tel-list">
+      <li class="mob-nav__tel-item">
+        <a href="tel:+380937622508" class="mob-nav__tel-link">+38 (093) 762 25 08</a>
+      </li>
+      <li class="mob-nav__tel-item">
+        <a href="tel:+380933069454" class="mob-nav__tel-link">+38 (093) 306 94 54</a>
+      </li>
+    </ul>
+
+    <nav class="mob-nav__nav">
+      <ul class="list-nostyled  accordion accordion-flush  mob-nav__nav-list" id="accordionFlushExample">
+
+        <li class="mob-nav__nav-item  active">
+          <a href="index.html" class="mob-nav__nav-link">
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#home"></use></svg>
+            <span>Головна</span>
+          </a>
+        </li>
+
+        <li class="mob-nav__nav-item">
+          <p class="mob-nav__item-header">
+            <button class="mob-nav__nav-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#company"></use></svg>
+              <span>Компанія</span>
+              <span class="mob-nav__nav-icon">
+                <svg width="16" height="16" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-down"></use></svg>
+              </span>
+            </button>
+          </p>
+          <div id="flush-collapseOne" class="mob-nav__collapse collapse" data-bs-parent="#accordionFlushExample">
+            <ul class="list-nostyled  mob-nav__list-lvl-2">
+              <li>
+                <a href="#" class="mob-nav__nav-link-lvl-2">Новини</a>
+              </li>
+              <li class="active">
+                <a href="#" class="mob-nav__nav-link-lvl-2">Документи</a>
+              </li>
+              <li>
+                <a href="#" class="mob-nav__nav-link-lvl-2">Про нас</a>
+              </li>
+              <li>
+                <a href="#" class="mob-nav__nav-link-lvl-2">Вакансії</a>
+              </li>
+              <li>
+                <a href="#" class="mob-nav__nav-link-lvl-2">Написати директору</a>
+              </li>
+              <li>
+                <a href="#" class="mob-nav__nav-link-lvl-2">Контакти</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="mob-nav__nav-item">
+          <a href="#" class="mob-nav__nav-link">
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#action"></use></svg>
+            <span>Акції</span>
+          </a>
+        </li>
+
+        <li class="mob-nav__nav-item">
+          <p class="mob-nav__item-header">
+            <button class="mob-nav__nav-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#tariff-bold"></use></svg>
+              <span>Тарифи</span>
+              <span class="mob-nav__nav-icon">
+                <svg width="16" height="16" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-down"></use></svg>
+              </span>
+            </button>
+          </p>
+          <div id="flush-collapseTwo" class="mob-nav__collapse collapse" data-bs-parent="#accordionFlushExample">
+            <ul class="list-nostyled  mob-nav__list-lvl-2">
+              <li>
+                <a href="#" class="mob-nav__nav-link-lvl-2">Для квартир</a>
+              </li>
+              <li>
+                <a href="#" class="mob-nav__nav-link-lvl-2">Для офісу</a>
+              </li>
+              <li>
+                <a href="#" class="mob-nav__nav-link-lvl-2">Телебачення</a>
+              </li>
+              <li>
+                <a href="#" class="mob-nav__nav-link-lvl-2">Додаткові послуги</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="mob-nav__nav-item">
+          <a href="#" class="mob-nav__nav-link">
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map"></use></svg>
+            <span>Покриття</span>
+          </a>
+        </li>
+
+        <li class="mob-nav__nav-item">
+          <p class="mob-nav__item-header">
+            <button class="mob-nav__nav-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#abonent"></use></svg>
+              <span>Абонентам</span>
+              <span class="mob-nav__nav-icon">
+                <svg width="16" height="16" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-down"></use></svg>
+              </span>
+            </button>
+          </p>
+          <div id="flush-collapseThree" class="mob-nav__collapse collapse" data-bs-parent="#accordionFlushExample">
+            <ul class="list-nostyled  mob-nav__list-lvl-2">
+              <li>
+                <a href="#" class="mob-nav__nav-link-lvl-2">Як платити</a>
+              </li>
+              <li>
+                <a href="#" class="mob-nav__nav-link-lvl-2">Особистий кабінет</a>
+              </li>
+              <li>
+                <a href="#" class="mob-nav__nav-link-lvl-2">FAQ</a>
+              </li>
+              <li>
+                <a href="#" class="mob-nav__nav-link-lvl-2">Магазин</a>
+              </li>
+              <li>
+                <a href="#" class="mob-nav__nav-link-lvl-2">Перевірка швидкості</a>
+              </li>
+              <li>
+                <a href="#" class="mob-nav__nav-link-lvl-2">Корисне</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+</div>

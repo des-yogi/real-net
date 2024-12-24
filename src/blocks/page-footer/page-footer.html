@@ -1,11 +1,97 @@
 <!--DEV
-
-Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-footer/page-footer.html')
-
 -->
 
-<footer class="page-footer" role="contentinfo">
-  page-footer
+<footer class="container  page-footer">
+
+  <div class="row  page-footer__row">
+
+    <div class="page-footer__col-main">
+      <div class="page-footer__main">
+        <div class="row  page-footer__inner-row">
+
+          <div class="page-footer__col-logo">
+            @@include('../../blocks/logo/logo.html', {
+              "logo": "real-net-logo",
+              "loading": "lazy"
+            })
+
+            @@include('../../blocks/social-links/social-links.html')
+          </div>
+
+          <div class="page-footer__col-slogan">
+            <p class="page-footer__slogan">“Наша компанія надає високоякісні послуги, орієнтуючись на потреби клієнтів та прагнучи створювати інноваційні рішення, що забезпечують комфорт і зручність у сучасному світі.”</p>
+          </div>
+
+          <div class="page-footer__col-contacts">
+            <section class="page-footer__contacts">
+              <h4 class="page-footer__contacts-title">Контактна інформація:</h4>
+
+              <div class="row">
+
+                <div class="page-footer__col-phones">
+                  <ul class="list-nostyled  page-footer__phones">
+                    <li>
+                      <a href="tel:+380937622508" class="page-footer__link">+38 (093) 762 25 08</a>
+                    </li>
+                    <li>
+                      <a href="tel:+380933069454" class="page-footer__link">+38 (093) 306 94 54</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="page-footer__col-mail">
+                  <p class="page-footer__mail">
+                    <a href="mailto:contact@realnet.kiev.ua" class="page-footer__link">contact@realnet.kiev.ua</a>
+                  </p>
+                </div>
+
+                <div class="page-footer__col-address">
+                  <p class="page-footer__address">
+                    <span>м. Київ</span>
+                    <span>вул. Бучми 5, оф 400</span>
+                  </p>
+                </div>
+
+              </div>
+            </section>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer__col-nav">
+      <nav class="page-footer__nav">
+        <ul class="list-nostyled  page-footer__nav-list">
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__link">Акції</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__link">Тарифи</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__link">Особистий кабінет</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__link">Магазин</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__link">FAQ</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__link">Покриття</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__link">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </div>
+
+  <div class="page-footer__copyrights">
+    @@include('../../blocks/copyrights/copyrights.html')
+  </div>
 </footer>
