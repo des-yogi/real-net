@@ -1,0 +1,44 @@
+.copyrights {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: $grey-200;
+
+  $block-name:                &; // #{$block-name}__element
+
+  @media (min-width: $screen-md) {
+    flex-direction: initial;
+    justify-content: space-between;
+  }
+
+  &__owner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  &__statement {
+    margin: 0;
+  }
+
+  &__dev {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+  }
+
+  &__dev-link {
+    display: inline-flex;
+
+    img {
+      display: block;
+      width: 82px;
+      height: 24px;
+    }
+  }
+}

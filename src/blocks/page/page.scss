@@ -273,9 +273,6 @@ a {
   @include col(xxl, 1, $grid-columns, 26px); // XXL (1800 по умолчанию) — 1 из 12, промежутки 26px
 } */
 
-
-// background: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
-
 * {
   //Firefox only
   /* «цвет ползунка» «цвет полосы скроллбара» */
@@ -320,9 +317,12 @@ a {
   }
 }
 
+// background-image: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color);
+// background-image: svg-load('../blocks/sprite-svg/svg/chevron-down.svg', fill=$text-color);
+
 /*
-@include col(xs, 12, 8, 16px);
-@include col(md, 6, 8, 16px);
+@include col(xs, 12, $grid-columns, 16px);
+@include col(md, 8, 8, 16px);
 @include col(lg, 4);
 @include col(xl, 3);
 */

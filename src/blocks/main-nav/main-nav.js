@@ -1,16 +1,16 @@
 (function(){
 
   // Добавление/удаление модификаторов при клике на переключение видимости
-  var toggler = document.getElementById('main-nav-toggler');
-  if(toggler){
-    toggler.addEventListener('click', mainNavVisibleToggle);
+  // var toggler = document.getElementById('main-nav-toggler');
+  // if(toggler){
+  //   toggler.addEventListener('click', mainNavVisibleToggle);
 
-    function mainNavVisibleToggle(e) {
-      e.preventDefault();
-      toggler.classList.toggle('burger--close'); // модификатор иконки (должен быть .burger)
-      //document.getElementById('main-nav').classList.toggle('main-nav--open');
-    }
-  }
+  //   function mainNavVisibleToggle(e) {
+  //     e.preventDefault();
+  //     toggler.classList.toggle('burger--close'); // модификатор иконки (должен быть .burger)
+  //     //document.getElementById('main-nav').classList.toggle('main-nav--open');
+  //   }
+  // }
 
   // Добавление/удаление модификаторов при фокусировке на ссылочном элементе
   var linkClassName = 'main-nav__link';
@@ -39,7 +39,6 @@
   }, true);
 
 
-
   // Добавление метода .parents()
   Element.prototype.parents = function(selector) {
     var elements = [];
@@ -59,17 +58,17 @@
     return elements;
   };
 
-  // Добавление метода .closest() (полифил, собственно)
-  // (function(e){
-  //  e.closest = e.closest || function(css){
-  //    var node = this;
+  //Добавление метода .closest() (полифил, собственно)
+  (function(e){
+   e.closest = e.closest || function(css){
+     var node = this;
 
-  //    while (node) {
-  //       if (node.matches(css)) return node;
-  //       else node = node.parentElement;
-  //    }
-  //    return null;
-  //  }
-  // })(Element.prototype);
+     while (node) {
+        if (node.matches(css)) return node;
+        else node = node.parentElement;
+     }
+     return null;
+   }
+  })(Element.prototype);
 
 }());
