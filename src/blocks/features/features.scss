@@ -1,0 +1,56 @@
+.features {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    gap: 16px 0;
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 2, 8, 16px);
+    @include col(lg, 2);
+
+    &:first-child {
+
+      @media (min-width: $screen-lg) {
+
+        @include col-offset(lg, 2);
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 8px;
+    text-align: center;
+    box-shadow: 0 0 14px 2px rgba(13, 16, 29, 0.65) inset;
+
+    @include border-gradient (
+      1px,
+      $border-radius,
+      $secondary-color,
+      linear-gradient(160deg, #3B6368 5%, #2A4954 22%, #25414B)
+    );
+
+    p {
+      hyphens: none;
+    }
+  }
+}
+

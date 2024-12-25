@@ -87,10 +87,6 @@
     }
   }
 
-  &__main {
-
-  }
-
   &__slogan {
     hyphens: none;
     color: $grey-200;
@@ -104,19 +100,13 @@
       padding-left: 24px;
       border-left: 1px solid $secondary-light;
     }
+
+    @media (min-width: $screen-lg) {
+      padding-left: 40px;
+    }
   }
 
   &__contacts {
-     // display: flex;
-     // flex-direction: column;
-     // align-items: flex-start;
-     // gap: 16px;
-
-    @media (min-width: $screen-md) {
-      //flex-direction: initial;
-      //flex-wrap: wrap;
-      //align-items: flex-start;
-    }
 
     .row {
       gap: 16px 0;
@@ -164,11 +154,6 @@
 
   &__mail {
     margin: 0;
-
-    // @media (min-width: $screen-md) {
-    //   flex: 1 1 50%;
-    //   max-width: 50%;
-    // }
   }
 
   &__address {
@@ -185,10 +170,6 @@
     span {
       display: block;
     }
-  }
-
-  &__nav {
-
   }
 
   &__nav-list {

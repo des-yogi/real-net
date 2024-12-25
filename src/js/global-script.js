@@ -61,6 +61,21 @@ window.addEventListener('resize', () => {
 }());
 
 (function(){
+
+  var bLazy = new Blazy({
+    selector: '.b-lazy'
+  });
+
+  /*$( window ).resize(function() {
+    if ( $( window ).width() >= 992 || $( window ).width() >= 1280 ) {
+      // подзагрузка скрытых изображений по ширине экрана
+      bLazy.load($('.b-lazy'), true);
+    }
+  });*/
+
+}());
+
+(function(){
   const phoneElems = document.getElementsByClassName('phone-mask');
   Array.prototype.forEach.call(phoneElems, function (item) {
     const phoneMask = IMask(

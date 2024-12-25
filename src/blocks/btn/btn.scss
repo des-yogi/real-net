@@ -73,4 +73,20 @@
       border-color: $grey-300;
     }
   }
+
+  &--link {
+    padding: 0;
+    text-transform: none;
+    color: $main-color;
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+      gap: 16px;
+      color: $main-dark;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
 }
