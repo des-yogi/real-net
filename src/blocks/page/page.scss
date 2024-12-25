@@ -317,6 +317,27 @@ a {
   }
 }
 
+@mixin border-gradient ($border-width, $border-radius, $background-color, $gradient) {
+  position: relative;
+  background: $background-color;
+  background-clip: padding-box; /* !importanté */
+  border: solid $border-width transparent; /* !importanté */
+  border-radius: $border-radius;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border-width; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: $gradient;
+  }
+}
+
 // background-image: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color);
 // background-image: svg-load('../blocks/sprite-svg/svg/chevron-down.svg', fill=$text-color);
 
