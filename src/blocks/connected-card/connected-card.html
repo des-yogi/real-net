@@ -1,14 +1,27 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
-@ @include('blocks/connected-card/connected-card.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="connected-card">content</div>
-
+@ @include('blocks/connected-card/connected-card.html', {
+  "img": "campus-card",
+  "label": "Вже в мережі",
+  "lblClass": "connected-card__status--planned",
+  "title": "Бізнес центр (Олекси Тихого 16/15)"
+})
 -->
+
+<a href="#" class="connected-card">
+  <div class="connected-card__styling">
+    <div class="embed-responsive  connected-card__img">
+      <picture>
+        <source srcset="img/@@img.webp, img/campus-card.webp 2x" type="image/webp">
+        <source srcset="img/@@img.jpg, img/campus-card.jpg 2x">
+          <!-- 292x164, 440x248 2x -->
+        <img src="img/@@img.jpg" alt="Campus" width="582" height="328" loading="lazy">
+      </picture>
+    </div>
+  </div>
+  <div class="connected-card__text">
+    <p class="connected-card__status  @@lblClass">
+      <span>@@label</span>
+    </p>
+    <h3 class="h5 connected-card__title">@@title</h3>
+  </div>
+</a>

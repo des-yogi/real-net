@@ -1,9 +1,32 @@
-// В этом файле должны быть стили для БЭМ-блока news-block, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .news-block {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__row {
+    gap: 16px 0;
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 4, 8, 16px);
+    @include col(lg, 3);
+    //@include col(xl, 3);
+
+    &:first-child {
+      @include col(md, 8, 8, 16px);
+      @include col(lg, 3);
+    }
+  }
 }

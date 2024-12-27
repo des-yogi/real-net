@@ -1,14 +1,56 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
-@ @include('blocks/tariff-card/tariff-card.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="tariff-card">content</div>
-
+@ @include('blocks/tariff-card/tariff-card.html', {
+  "img": "tariff-1",
+  "title": "U149",
+  "speed": "50",
+  "oldPrice": "2000",
+  "price": "200",
+  "info": "Найкращий вибір для всіх видів дозвілля",
+  "label": "Акція",
+  "labelClass": "purple"
+})
 -->
+
+<article class="tariff-card">
+  <div class="embed-responsive  tariff-card__img">
+    <picture>
+      <source srcset="img/@@img.webp, img/tariff-1.webp 2x" type="image/webp">
+      <source srcset="img/@@img.jpg, img/tariff-1.jpg 2x">
+        <!-- 400x225, 600x338 2x -->
+      <img src="img/@@img.jpg" alt="Text 1" width="600" height="338" loading="lazy">
+    </picture>
+  </div>
+  <div class="tariff-card__text">
+    <h4 class="h3  tariff-card__title">
+      @@title
+      <span>Оптимальний варіант</span>
+    </h4>
+
+    <p class="tariff-card__battery">
+      <span>Працює без світла</span>
+    </p>
+
+    <table class="tariff-card__options">
+      <tbody>
+        <tr>
+          <th>Швидкість:</th>
+          <td>@@speed мб/с</td>
+        </tr>
+        <tr>
+          <th>Ціна:</th>
+          <td>
+            <span class="tariff-card__old-price">@@oldPrice</span>
+            @@price грн
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="tariff-card__info">@@info</p>
+
+    <button class="btn  tariff-card__order">
+      <span>Замовити</span>
+    </button>
+  </div>
+  <span class="tariff-card__label  @@labelClass">@@label</span>
+</article>

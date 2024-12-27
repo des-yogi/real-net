@@ -1,14 +1,118 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/order-form/order-form.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="order-form">content</div>
-
 -->
+
+<section class="container  order-form__wrapper">
+
+  <div class="order-form__inner  b-lazy" data-src="img/green-pattern-bg.jpg">
+    <div class="row">
+
+      <div class="order-form__col">
+        <div style="width: 100%;">
+
+          <div class="row order-form__inner-row">
+
+            <div class="order-form__inner-col-text">
+              <div class="order-form__container">
+
+                <div class="section-heading  section-heading--white  section-heading--news">
+                  <h2 class="section-heading__title">Форма зв’язку</h2>
+                  <p class="h2 section-heading__slogan">Залишай заявку та насолоджуйся швидкістю та надійністю разом з RealNET</p>
+                </div>
+
+                <form class="order-form__form" action="#" method="post">
+
+                  <label class="field-text">
+                    <span class="field-text__name">Ваше ім’я<sup>*</sup></span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" name="name" value="" placeholder="Ім’я">
+                      <span class="field-text__help-text" data-error="[[+tv.error.name]]">Пояснение</span>
+                    </span>
+                  </label>
+
+                  <div class="order-form__input-group">
+                    <label class="field-text">
+                      <span class="field-text__name">Ваш email<sup>*</sup></span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="email" name="email" value="" placeholder="@mail.com">
+                        <span class="field-text__help-text" data-error="[[+tv.error.email]]"></span>
+                      </span>
+                    </label>
+
+                    <label class="field-text">
+                      <span class="field-text__name">Ваш номер телефону</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input  phone-mask" type="tel" name="tel" value="" placeholder="+38 066 172 03 12">
+                        <span class="field-text__help-text" data-error="[[+tv.error.tel]]"></span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <label class="field-text">
+                    <span class="field-text__name">Ваше повідомлення</span>
+                    <span class="field-text__input-wrap">
+                      <textarea class="field-text__input" name="message" rows="4" placeholder="Text placeholder"></textarea>
+                      <span class="field-text__help-text" data-error="[[+tv.error.message]]"></span>
+                    </span>
+                  </label>
+
+
+                  <div class="field-actions">
+                    <!-- <div class="field-actions__text">* — обязательные поля</div> -->
+                    <div class="field-actions__agreement">
+
+                      <div class="field-checkbox" style="margin: 8px 0 40px;">
+                        <label class="field-checkbox__name">
+                          <input class="field-checkbox__input" type="checkbox" name="agreement" checked>
+                          <span class="field-checkbox__name-text">Я погоджуюсь на обробку <a href="#">персональних даних</a></span>
+                        </label>
+                      </div>
+
+                      <div class="order-form__controls">
+                        <div class="field-actions__captcha">
+                          <img src="img/reCaptcha.gif" alt="" width="302" height="74" loading="lazy" style="display: block;">
+                        </div>
+                        <div class="field-actions__btn">
+                          <button class="btn" type="submit" name="submit">
+                            <span>Відправити</span>
+                          </button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+
+            <div class="order-form__inner-col-img">
+
+              <div class="order-form__steps" role="list">
+                <div class="order-form__container  order-form__step" role="listitem">
+                  <span class="order-form__step-num">1</span>
+                  <p class="order-form__step-info">Залишай заявку на сайті або по телефону</p>
+                </div>
+
+                <div class="order-form__container  order-form__step" role="listitem">
+                  <span class="order-form__step-num">2</span>
+                  <p class="order-form__step-info">Погоджуйте зручний для Вас час для підключення</p>
+                </div>
+
+                <div class="order-form__container  order-form__step" role="listitem">
+                  <span class="order-form__step-num">3</span>
+                  <p class="order-form__step-info">Майстер виконає підключення в обумовлений термін</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>

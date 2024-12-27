@@ -1,9 +1,200 @@
-// В этом файле должны быть стили для БЭМ-блока order-form, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .order-form {
 
   $block-name:                &; // #{$block-name}__element
 
+  &__wrapper {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+  }
+
+  &__inner {
+    padding: 48px 16px;
+    background-color: $main-color;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    border-radius: $border-radius--lg;
+    box-shadow: 0 0 20px 3px rgba(13, 16, 29, 0.50) inset;
+    overflow: hidden;
+
+    @media (max-width: $screen-md - 1) {
+      margin-right: -16px;
+      margin-left: -16px;
+    }
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col-offset(md,  1, 8);
+    @include col(md, 6, 8, 16px);
+    @include col-offset(lg, 1);
+    @include col(lg, 10);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__container {
+    width: 100%;
+    padding: 16px;
+    @include border-gradient (
+      1px,
+      $border-radius,
+      $secondary-color,
+      $border-gradient
+    );
+    box-shadow: 0 2px 9.8px 1px rgba(20, 39, 46, 0.60),
+                0 0px 10px 1px rgba(13, 16, 29, 0.50) inset;
+  }
+
+  &__inner-row {
+    gap: 32px 0;
+  }
+
+  &__inner-col-text,
+  &__inner-col-img {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 8, 8, 16px);
+  }
+
+  &__inner-col-text {
+    @include col(lg, 6);
+  }
+
+  &__inner-col-img {
+    @include col(lg, 6);
+  }
+
+  &__form {
+
+  }
+
+  &__input-group {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0 16px;
+
+      & > * {
+        flex: 1 1 50%;
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    gap: 24px 16px;
+
+    @media (min-width: $screen-md) {
+      flex-direction: initial;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  &__inner-col-img {
+
+  }
+
+  &__steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (min-width: $screen-lg) {
+      gap: 64px;
+      padding-top: 60px;
+      padding-left: 20px;
+    }
+  }
+
+  &__step {
+
+    @media (min-width: $screen-lg) {
+      //position: relative;
+      width: 274px;
+    }
+
+    &:nth-child(1) {
+
+      &::before {
+
+        @media (min-width: $screen-lg) {
+          display: block;
+          content: "";
+          position: absolute;
+          z-index: 1;
+          top: 16px;
+          right: -212px;
+          width: 204px;
+          height: 199px;
+          background-color: transparent;
+          background-repeat: no-repeat;
+          background-size: 204px 199px;
+          background-position: center;
+          background-image: url(/img/order-arrow-1.png);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+
+      @media (min-width: $screen-lg) {
+        //transform: translateX(212px);
+        margin-left: 212px;
+      }
+    }
+
+    &:nth-child(3) {
+
+      &::before {
+
+        @media (min-width: $screen-lg) {
+          display: block;
+          content: "";
+          position: absolute;
+          z-index: 1;
+          bottom: 156px;
+          left: -20px;
+          width: 258px;
+          height: 201px;
+          background-color: transparent;
+          background-repeat: no-repeat;
+          background-size: 258px 201px;
+          background-position: center;
+          background-image: url(/img/order-arrow-2.png);
+        }
+      }
+    }
+  }
+
+  &__step-num {
+    display: block;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1;
+    color: $main-color;
+  }
+
+  &__step-info {
+    padding-top: 8px;
+    margin-top: 4px;
+    hyphens: none;
+    border-top: 1px solid $secondary-light;
+  }
 }

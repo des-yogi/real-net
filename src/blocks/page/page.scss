@@ -317,14 +317,117 @@ a {
   }
 }
 
+.swiper {
+
+  &__controls-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+
+    &:has(.swiper-button-lock),
+    &:has(.swiper-pagination-lock) {
+      display: none;
+    }
+  }
+
+  &__controls {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .swiper-wrapper,
+  .swiper-slide {
+    box-sizing: border-box;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next,
+  .swiper-pagination {
+    position: static;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    flex: 0 0;
+    flex-basis: 48px;
+    width: 48px;
+    height: 32px;
+    border-radius: $border-radius--lg;
+    background-color: $main-color;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    transition: background $transition-time;
+
+    &:hover,
+    &:focus {
+      background-color: $main-dark;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev {
+    background-image: svg-load('../blocks/sprite-svg/svg/arrow-left.svg', fill=$grey-400);
+  }
+
+  .swiper-button-next {
+    background-image: svg-load('../blocks/sprite-svg/svg/arrow-right.svg', fill=$grey-400);
+  }
+
+  .swiper-button-disabled {
+    opacity: 1;
+    color: $grey-300;
+    background-color: $grey-200;
+  }
+
+  .swiper-pagination {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 0 !important;
+    background-color: $main-color;
+    opacity: 0.4;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+}
+
+.publishedon {
+  display: block;
+  font-size: $font-size-sm;
+  color: $grey-200;
+
+  &:empty {
+    display: none;
+  }
+}
+
 @mixin border-gradient ($border-width, $border-radius, $background-color, $gradient) {
   position: relative;
-  background: $background-color;
+  background-color: $background-color;
   background-clip: padding-box; /* !importanté */
   border: solid $border-width transparent; /* !importanté */
   border-radius: $border-radius;
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
     top: 0;

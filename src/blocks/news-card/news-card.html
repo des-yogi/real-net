@@ -1,14 +1,36 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
-@ @include('blocks/news-card/news-card.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="news-card">content</div>
-
+@ @include('blocks/news-card/news-card.html', {
+  "img": "news-img",
+  "title": "Назва Новини",
+  "publishedon": "09.10.2024"
+})
 -->
+
+<a href="#" class="news-card">
+  <div class="news-card__styling">
+    <div class="embed-responsive  news-card__img">
+      <picture>
+        <source srcset="img/@@img.webp,
+                        img/@@img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+        <source srcset="img/@@img.jpg,
+                        img/@@img.jpg 2x" media="(min-width: 1280px)">
+          <!-- 312x176, 492x277 2x -->
+        <source srcset="img/@@img.webp, img/@@img.webp 2x" media="(min-width: 992px)" type="image/webp">
+        <source srcset="img/@@img.jpg, img/@@img.jpg 2x" media="(min-width: 992px)">
+          <!-- 574x323, 855x481 2x -->
+        <source srcset="img/@@img.webp" media="(min-width: 768px)" type="image/webp">
+        <source srcset="img/@@img.jpg" media="(min-width: 768px)">
+          <!-- 705x397 --// 675x380 -->
+        <source srcset="img/@@img.webp" media="(min-width: 320px)" type="image/webp">
+        <source srcset="img/@@img.jpg" media="(min-width: 320px)">
+          <!-- 492x277 -->
+        <img src="img/@@img.jpg" alt="Alt text" width="" height="" loading="lazy">
+      </picture>
+    </div>
+  </div>
+
+  <div class="news-card__text">
+    <h3 class="h5  news-card__title">@@title</h3>
+    <time class="publishedon" datetime="2024-10-09">@@publishedon</time>
+  </div>
+</a>
