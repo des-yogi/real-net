@@ -1,9 +1,13 @@
-// В этом файле должны быть стили для БЭМ-блока text-divider, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .text-divider {
 
   $block-name:                &; // #{$block-name}__element
 
+  height: 20px;
+  margin: 2px 0;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-image: svg-load('../blocks/text-divider/bg-img/realnet-string.svg', fill=$main-color);
+  opacity: 0.25;
 }

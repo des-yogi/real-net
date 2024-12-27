@@ -44,10 +44,11 @@
 
 @mixin field-help-text {
   display: block;
-  padding-top: 0.4em;
+  padding-top: 8px;
   font-size: $font-size-sm;
   line-height: 1.2em;
-  color: $text-muted;
+  letter-spacing: 0.224px;
+  color: $badge-yellow;
 
   &:empty { // stylelint-disable-line
     display: none;
@@ -56,14 +57,29 @@
 
 
 @mixin field-focus {
+  color: $grey-100;
   outline: 0;
-  box-shadow: 0 0 0 2px rgba($color-main, $opacity);
+  //box-shadow: 0 0 0 1px rgba($color-main, $opacity);
+  border-color: $main-color;
+  box-shadow: 0 0 10px 0px rgba(65, 209, 130, 0.35),
+              0 0 6px 1px rgba(13, 16, 29, 0.40) inset;
 }
 
 
 @mixin field-name {
-  display: block;
-  margin-bottom: 0.4em;
+  display: inline-flex;
+  gap: 0 3px;
+  position: relative;
+  margin-bottom: 8px;
+  font-size: $font-size-sm;
+  font-weight: 300;
   line-height: $line-height;
-  font-weight: 700;
+  letter-spacing: 0.224px;
+  color: $grey-200;
+
+  sup {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+  }
 }

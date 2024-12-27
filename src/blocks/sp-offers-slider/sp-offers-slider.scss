@@ -1,9 +1,20 @@
-// В этом файле должны быть стили для БЭМ-блока sp-offers-slider, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .sp-offers-slider {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__item {
+    width: 328px;
+  }
 }

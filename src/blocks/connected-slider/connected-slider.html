@@ -1,14 +1,77 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/connected-slider/connected-slider.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="connected-slider">content</div>
-
 -->
+
+<section class="container  connected-slider">
+  @@include('../../blocks/section-heading/section-heading.html', {
+    "title": "Підключено",
+    "slogan": "Не перестаємо розвиватися і долати нові відстані",
+    "intro": "",
+    "addClass": "section-heading--white"
+  })
+
+  <div class="swiper  connected-slider__container">
+
+    <div class="swiper__controls-wrapper" style="margin:0 0 24px;">
+      <div class="swiper__controls">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide  connected-slider__item">
+        @@include('../../blocks/connected-card/connected-card.html', {
+          "img": "campus-card",
+          "label": "Вже в мережі",
+          "lblClass": "",
+          "title": "Бізнес центр (Олекси Тихого 16/15)"
+        })
+      </div>
+
+      <div class="swiper-slide  connected-slider__item">
+        <div class="swiper-slide  connected-slider__item">
+          @@include('../../blocks/connected-card/connected-card.html', {
+            "img": "campus-card",
+            "label": "Планується",
+            "lblClass": "connected-card__status--planned",
+            "title": "Бізнес центр"
+          })
+      </div>
+      </div>
+
+      <div class="swiper-slide  connected-slider__item">
+        <div class="swiper-slide  connected-slider__item">
+          @@include('../../blocks/connected-card/connected-card.html', {
+            "img": "campus-card",
+            "label": "Вже в мережі",
+            "lblClass": "",
+            "title": "Бізнес центр (Олекси Тихого 16/15)"
+          })
+      </div>
+      </div>
+
+      <div class="swiper-slide  connected-slider__item">
+        @@include('../../blocks/connected-card/connected-card.html', {
+          "img": "campus-card",
+          "label": "Вже в мережі",
+          "lblClass": "connected-card__status--planned",
+          "title": "Бізнес центр (Олекси Тихого 16/15)"
+        })
+      </div>
+
+      <div class="swiper-slide  connected-slider__item">
+        @@include('../../blocks/connected-card/connected-card.html', {
+          "img": "campus-card",
+          "label": "Планується",
+          "lblClass": "connected-card__status--planned",
+          "title": "Бізнес центр (Олекси Тихого 16/15)"
+        })
+      </div>
+
+    </div>
+
+  </div>
+</section>

@@ -1,9 +1,36 @@
-// В этом файле должны быть стили для БЭМ-блока connected-slider, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .connected-slider {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__container {
+
+    @media (min-width: $screen-xl) {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+  &__item {
+    width: 242px;
+
+    @media (min-width: $screen-md) {
+      width: 266px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: auto;
+    }
+  }
 }

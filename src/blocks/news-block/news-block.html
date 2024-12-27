@@ -1,14 +1,47 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/news-block/news-block.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="news-block">content</div>
-
 -->
+
+<secttion class="container  news-block">
+
+  <div class="row  news-block__row">
+
+    <div class="news-block__col">
+      <div class="section-heading  section-heading--white  section-heading--news">
+        <h2 class="section-heading__title">Новини</h2>
+        <p class="h2 section-heading__slogan">Будьте в курсі останніх новин компанії!</p>
+        <p class="section-heading__intro">
+          <a href="#" class="btn  section-heading__link">
+            <span>Всі новини</span>
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="news-block__col">
+      @@include('../../blocks/news-card/news-card.html', {
+        "img": "news-img",
+        "title": "Назва Новини",
+        "publishedon": "09.10.2024"
+      })
+    </div>
+
+    <div class="news-block__col">
+      @@include('../../blocks/news-card/news-card.html', {
+        "img": "news-img",
+        "title": "Назва Новини",
+        "publishedon": "09.10.2024"
+      })
+    </div>
+
+    <div class="news-block__col">
+      @@include('../../blocks/news-card/news-card.html', {
+        "img": "news-img",
+        "title": "Назва Новини",
+        "publishedon": "09.10.2024"
+      })
+    </div>
+
+  </div>
+
+</secttion>

@@ -38,22 +38,30 @@ $text-color:                  $grey-100;
 $title-color:                 $text-color;
 $text-muted:                  $grey-300;
 
-$body-bg:                     linear-gradient(90deg,
-                                              #112025 0%,
-                                              #15272E 21.9%,
-                                              #162A32 50%,
-                                              #15272E 78.4%,
-                                              #112025 100%);
+$body-bg:                     linear-gradient(
+                                90deg,
+                                #112025 0%,
+                                #15272E 21.9%,
+                                #162A32 50%,
+                                #15272E 78.4%,
+                                #112025 100%);
 
 $badge-red:                   $color-danger;
 $badge-yellow:                #ffe137;
 $badge-purple:                #b432ff;
+$badge-green:                 $main-color;
 
 $link-color:                  $main-color;
 $link-color--hover:           $link-color;
 
 $border-color:                #395b67;
 $divider-color:               $main-color;
+
+$border-gradient:             linear-gradient(
+                                160deg,
+                                #3B6368 5%,
+                                #2A4954 22%,
+                                #25414B 98%);
 
 
 // Базовая типографика

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g class="main">
+    <path fill-rule="evenodd" d="M36 10h-9V6a2 2 0 0 0-2-2H15a2 2 0 0 0-2 2v4H4a2 2 0 0 0-2 2v7c0 2 1.5 2 2 2h13v-2c0-.5.5-1 1-1h4c.5 0 1 .5 1 1v2h13c1 0 2-.5 2-2v-7a2 2 0 0 0-2-2Zm-20 0V8c0-.5.5-1 1-1h6c.5 0 1 .5 1 1v2h-8Z"/>
+  </g>
+  <g class="hover-class">
+    <path d="M2 34V23.5c.3.2 1.2.5 2 .5h13v2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-2h13c1.2 0 1.8-.3 2-.5V34a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2Z"/>
+  </g>
+</svg>

@@ -1,14 +1,212 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/tariff-slider/tariff-slider.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="tariff-slider">content</div>
-
 -->
+
+<section class="container  tariff-slider">
+
+  @@include('../../blocks/section-heading/section-heading.html', {
+    "title": "Тарифи",
+    "slogan": "Знайди свій ідеальний тариф",
+    "intro": "",
+    "addClass": "section-heading--tariff"
+  })
+
+  <nav class="tariff-slider__nav">
+    <div class="nav nav-tabs  tariff-slider__tabs" id="nav-tab" role="tablist">
+      <div class="selector" role="presentation"></div>
+
+      <button class="nav-link  tariff-slider__btn  active" id="tariff-1-tab" data-bs-toggle="tab" data-bs-target="#tariff-1" type="button" role="tab" aria-controls="tariff-1" aria-selected="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path fill-rule="evenodd" d="M34.4 19.5v12.7c0 2.1-1.7 3.8-3.8 3.8h-7V24.9c0-.4-.4-.8-.8-.8h-5.6c-.4 0-.8.4-.8.8V36h-7a3.8 3.8 0 0 1-3.8-3.8V19.5L20 10.4l14.4 9.1Z" class="main"/><path d="M4.2 18.5c-1 .6-2.2.3-2.8-.6-.6-1-.3-2.2.6-2.8L18.9 4.3c.7-.4 1.6-.4 2.2 0l7.7 4.9V7.9c0-.5.4-.9.9-.9h3.1c.5 0 .9.4.9.9v4.5l4.2 2.7c1 .6 1.2 1.9.6 2.8-.6 1-1.9 1.2-2.8.6l-15.8-10-15.8 10h.1Z" class="hover-class"/></svg>
+        <span>Для дому</span>
+      </button>
+
+      <button class="nav-link  tariff-slider__btn " id="tariff-2-tab" data-bs-toggle="tab" data-bs-target="#tariff-2" type="button" role="tab" aria-controls="tariff-2" aria-selected="false">
+         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path fill-rule="evenodd" d="M36 10h-9V6a2 2 0 0 0-2-2H15a2 2 0 0 0-2 2v4H4a2 2 0 0 0-2 2v7c0 2 1.5 2 2 2h13v-2c0-.5.5-1 1-1h4c.5 0 1 .5 1 1v2h13c1 0 2-.5 2-2v-7a2 2 0 0 0-2-2Zm-20 0V8c0-.5.5-1 1-1h6c.5 0 1 .5 1 1v2h-8Z" class="main"/><path d="M2 34V23.5c.3.2 1.2.5 2 .5h13v2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-2h13c1.2 0 1.8-.3 2-.5V34a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2Z" class="hover-class"/></svg>
+        <span>Для бізнесу</span>
+      </button>
+
+      <button class="nav-link  tariff-slider__btn " id="tariff-3-tab" data-bs-toggle="tab" data-bs-target="#tariff-3" type="button" role="tab" aria-controls="tariff-3" aria-selected="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path d="M4 33h32a2 2 0 0 1 2 2 2 2 0 0 1-2 2H4a2 2 0 0 1-2-2c0-1.1.9-2 2-2Z" class="main"/><path d="M36 7.5H24.4L26 3.2v-.5c0-.6-.4-1.2-1-1.4-.8-.3-1.6.1-1.9.9l-1.5 4-1.5-4c-.2-.6-.8-1-1.4-1h-.5c-.8.3-1.2 1.2-.9 1.9l1.6 4.3H4a2 2 0 0 0-2 2v21c0 1.1.9 2 2 2h32a2 2 0 0 0 2-2V9.5a2 2 0 0 0-2-2Zm-10.5 13L18 24.9c-.7.4-1.5 0-1.5-.9v-8.9c0-.8.8-1.3 1.5-.9l7.5 4.4c.7.4.7 1.3 0 1.7v.2Z" class="hover-class"/></svg>
+        <span>Телебачення</span>
+      </button>
+
+    </div>
+  </nav>
+
+  <div class="tab-content  tariff-slider__content" id="nav-tabContent">
+
+    <div class="tab-pane  tariff-slider__pane  fade show active" id="tariff-1" role="tabpanel" aria-labelledby="tariff-1-tab" tabindex="0">
+      <section id="home-slider" class="swiper  tariff-slider__container">
+        <h3 class="visually-hidden">Тарифи для дому</h3>
+
+        <div class="swiper-wrapper  tariff-slider__row">
+
+          <div class="swiper-slide  tariff-slider__item">
+            @@include('../../blocks/tariff-card/tariff-card.html', {
+              "img": "tariff-1",
+              "title": "U149",
+              "speed": "50",
+              "oldPrice": "2000",
+              "price": "150",
+              "info": "Найкращий вибір для всіх видів дозвілля",
+              "label": "Акція",
+              "labelClass": "purple"
+            })
+          </div>
+
+          <div class="swiper-slide  tariff-slider__item">
+            @@include('../../blocks/tariff-card/tariff-card.html', {
+              "img": "tariff-2",
+              "title": "U149",
+              "speed": "100",
+              "oldPrice": "2000",
+              "price": "200",
+              "info": "Найкращий вибір для всіх видів дозвілля",
+              "label": "Рекомендовано нами",
+              "labelClass": "green"
+            })
+          </div>
+
+          <div class="swiper-slide  tariff-slider__item">
+            @@include('../../blocks/tariff-card/tariff-card.html', {
+              "img": "tariff-3",
+              "title": "U149",
+              "speed": "1000",
+              "oldPrice": "2000",
+              "price": "300",
+              "info": "Найкращий вибір для всіх видів дозвілля",
+              "label": "Топ",
+              "labelClass": "yellow"
+            })
+          </div>
+
+        </div>
+
+        <div class="swiper__controls-wrapper">
+          <div class="swiper__controls">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="tab-pane  tariff-slider__pane  fade" id="tariff-2" role="tabpanel" aria-labelledby="tariff-2-tab" tabindex="0">
+      <section id="business-slider" class="swiper  tariff-slider__container">
+        <h3 class="visually-hidden">Тарифи для бізнесу</h3>
+
+        <div class="swiper-wrapper  tariff-slider__row">
+
+          <div class="swiper-slide  tariff-slider__item">
+            @@include('../../blocks/tariff-card/tariff-card.html', {
+              "img": "tariff-1",
+              "title": "U149",
+              "speed": "50",
+              "oldPrice": "2000",
+              "price": "150",
+              "info": "Найкращий вибір для всіх видів дозвілля",
+              "label": "Акція",
+              "labelClass": "purple"
+            })
+          </div>
+
+          <div class="swiper-slide  tariff-slider__item">
+            @@include('../../blocks/tariff-card/tariff-card.html', {
+              "img": "tariff-2",
+              "title": "U149",
+              "speed": "100",
+              "oldPrice": "2000",
+              "price": "200",
+              "info": "Найкращий вибір для всіх видів дозвілля",
+              "label": "Рекомендовано нами",
+              "labelClass": "green"
+            })
+          </div>
+
+          <div class="swiper-slide  tariff-slider__item">
+            @@include('../../blocks/tariff-card/tariff-card.html', {
+              "img": "tariff-3",
+              "title": "U149",
+              "speed": "1000",
+              "oldPrice": "2000",
+              "price": "300",
+              "info": "Найкращий вибір для всіх видів дозвілля",
+              "label": "Топ",
+              "labelClass": "yellow"
+            })
+          </div>
+
+        </div>
+
+        <div class="swiper__controls-wrapper">
+          <div class="swiper__controls">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <div class="tab-pane  tariff-slider__pane  fade" id="tariff-3" role="tabpanel" aria-labelledby="tariff-3-tab" tabindex="0">
+      <section id="tv-slider" class="swiper  tariff-slider__container">
+        <h3 class="visually-hidden">Тарифи на телебачення</h3>
+
+        <div class="swiper-wrapper  tariff-slider__row">
+
+          <div class="swiper-slide  tariff-slider__item">
+            @@include('../../blocks/tariff-card/tariff-card.html', {
+              "img": "tariff-1",
+              "title": "U149",
+              "speed": "50",
+              "oldPrice": "2000",
+              "price": "150",
+              "info": "Найкращий вибір для всіх видів дозвілля",
+              "label": "Акція",
+              "labelClass": "purple"
+            })
+          </div>
+
+          <div class="swiper-slide  tariff-slider__item">
+            @@include('../../blocks/tariff-card/tariff-card.html', {
+              "img": "tariff-2",
+              "title": "U149",
+              "speed": "100",
+              "oldPrice": "2000",
+              "price": "200",
+              "info": "Найкращий вибір для всіх видів дозвілля",
+              "label": "Рекомендовано нами",
+              "labelClass": "green"
+            })
+          </div>
+
+          <div class="swiper-slide  tariff-slider__item">
+            @@include('../../blocks/tariff-card/tariff-card.html', {
+              "img": "tariff-3",
+              "title": "U149",
+              "speed": "1000",
+              "oldPrice": "2000",
+              "price": "300",
+              "info": "Найкращий вибір для всіх видів дозвілля",
+              "label": "Топ",
+              "labelClass": "yellow"
+            })
+          </div>
+
+        </div>
+
+        <div class="swiper__controls-wrapper">
+          <div class="swiper__controls">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+</section>

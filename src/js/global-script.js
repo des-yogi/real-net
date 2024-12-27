@@ -80,8 +80,8 @@ window.addEventListener('resize', () => {
   Array.prototype.forEach.call(phoneElems, function (item) {
     const phoneMask = IMask(
       item, {
-        mask: '+{38\\0} (00) 000 00 00',
-        lazy: true // make placeholder always visible
+        mask: '+{38} (\\000) 000 00 00',
+        lazy: true, // make placeholder always visible
     });
   });
 }());

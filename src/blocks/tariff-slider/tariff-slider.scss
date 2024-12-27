@@ -1,9 +1,207 @@
-// В этом файле должны быть стили для БЭМ-блока tariff-slider, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .tariff-slider {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  .swiper__controls {
+
+    @media (max-width: $screen-md - 1) {
+      display: none;
+    }
+  }
+
+  &__row {
+
+    @media (max-width: $screen-md - 1) {
+      flex-direction: column;
+      gap: 16px 0;
+    }
+  }
+
+  &__item {
+    height: auto;
+
+    @media (max-width: $screen-md - 1) {
+      max-width: 400px;
+      //width: auto;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 312px;
+    }
+
+    &:nth-child(1) {
+
+      & > * {
+
+        &:hover,
+        &:focus {
+          box-shadow: 0 6px 20px 1px rgba(255, 255, 255, 0.25),
+                      0 0 10px 1px rgba(13, 16, 29, 0.50) inset;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+
+      & > * {
+
+        &:hover,
+        &:focus {
+          box-shadow: 0 6px 20px 1px rgba(255, 225, 55, 0.25),
+                      0 0px 10px 1px rgba(13, 16, 29, 0.50) inset;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+
+      & > * {
+
+        &:hover,
+        &:focus {
+          box-shadow: 0 0px 10px 1px rgba(13, 16, 29, 0.50) inset,
+                      0 6px 20px 1px rgba(180, 50, 255, 0.25);
+        }
+      }
+    }
+
+    &:nth-child(4) {
+
+      & > * {
+
+        &:hover,
+        &:focus {
+          box-shadow: 0 6px 20px 1px rgba(65, 209, 130, 0.25),
+                      0 0px 10px 1px rgba(13, 16, 29, 0.50) inset;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+
+    @media (max-width: $screen-md - 1) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    width:  100%;
+    position: relative;
+
+    @media (min-width: $screen-sm) {
+      justify-content: center;
+      width: auto;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 48px;
+      right: 0;
+      left: 0;
+      height: 1px;
+      background-color: $grey-200;
+    }
+
+    .selector {
+      display: inline-flex;
+      position: absolute;
+      height: 3px;
+      left: 0;
+      top: 47px;
+      z-index: 1;
+      border-radius: 3px 3px 3px 3px;
+      background-color: $main-color;
+      transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      pointer-events: none;
+    }
+  }
+
+  &__btn {
+    flex: 1 1 auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-width: 80px;
+    max-width: 175px;
+    min-height: 40px;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: $font-size;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: 0.16px;
+    cursor: pointer;
+    user-select: none;
+
+    @media (min-width: $screen-sm) {
+      min-width: 100px;
+    }
+
+    @media (min-width: $screen-md) {
+      min-width: 172px;
+    }
+
+    &:hover,
+    &:focus {
+
+      svg {
+
+        .hover-class {
+          fill: $main-color;
+        }
+      }
+    }
+
+    &.active {
+
+      svg {
+        fill: $main-color;
+      }
+    }
+
+    span {
+      display: block;
+      margin-top: 16px;
+
+      @media (max-width: $screen-md - 1) {
+        display: none;
+      }
+    }
+
+    svg {
+      width: 40px;
+      height: 40px;
+      transition: fill $transition-time;
+
+      .hover-class {
+        transition: fill $transition-time;
+      }
+    }
+  }
 }

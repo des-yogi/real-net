@@ -1,14 +1,60 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/sp-offers-slider/sp-offers-slider.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="sp-offers-slider">content</div>
-
 -->
+
+<section class="container  sp-offers-slider">
+
+  @@include('../../blocks/section-heading/section-heading.html', {
+    "title": "Акції",
+    "slogan": "Не втрачай можливостей",
+    "intro": "",
+    "addClass": "section-heading--white"
+  })
+
+  <div class="swiper  sp-offers-slider__container">
+
+    <div class="swiper__controls-wrapper" style="margin:0 0 24px;">
+      <div class="swiper__controls">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide  sp-offers-slider__item">
+        @@include('../../blocks/news-card/news-card.html', {
+          "img": "news-img",
+          "title": "Акція “3 місяці” вже в дії!",
+          "publishedon": ""
+        })
+      </div>
+
+      <div class="swiper-slide  sp-offers-slider__item">
+        @@include('../../blocks/news-card/news-card.html', {
+          "img": "news-img",
+          "title": "Оплачуй 10 місяців інтернету і отримуй 2 у подарунок",
+          "publishedon": ""
+        })
+      </div>
+
+      <div class="swiper-slide  sp-offers-slider__item">
+        @@include('../../blocks/news-card/news-card.html', {
+          "img": "news-img",
+          "title": "Акційна пропозиція “Приведи друга”",
+          "publishedon": ""
+        })
+      </div>
+
+      <div class="swiper-slide  sp-offers-slider__item">
+        @@include('../../blocks/news-card/news-card.html', {
+          "img": "news-img",
+          "title": "Акція “Тестовий період”",
+          "publishedon": ""
+        })
+      </div>
+
+    </div>
+  </div>
+</section>
