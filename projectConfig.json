@@ -45,7 +45,8 @@
     "news-card": [],
     "news-block": [],
     "order-form": [],
-    "section-heading": []
+    "section-heading": [],
+    "gpon-hero-card": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

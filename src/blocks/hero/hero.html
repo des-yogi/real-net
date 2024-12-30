@@ -1,14 +1,29 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/hero/hero.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="hero">content</div>
-
 -->
+
+<div class="container  hero">
+  <div class="swiper  hero__container">
+
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide  hero__item">
+        @@include('../../blocks/gpon-hero-card/gpon-hero-card.html')
+      </div>
+
+      <div class="swiper-slide  hero__item">Slide 2</div>
+
+      <div class="swiper-slide  hero__item">Slide 3</div>
+
+    </div>
+
+    <div class="swiper__controls-wrapper">
+      <div class="swiper__controls">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
