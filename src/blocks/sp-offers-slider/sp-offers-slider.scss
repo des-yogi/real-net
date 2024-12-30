@@ -12,7 +12,14 @@
     padding-bottom: 48px;
   }
 
-  $block-name:                &; // #{$block-name}__element
+  $block-name:                &; // #{$block-name}__element'
+
+  &__container {
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: -8px;
+    margin-right: -8px;
+  }
 
   &__item {
     width: 328px;

@@ -68,6 +68,15 @@
       height: 1px;
       background-color: $main-color;
     }
+
+    &--iconless {
+      padding-left: 0;
+      background: none;
+
+      &::after {
+        display: none;
+      }
+    }
   }
 
   &__options {
@@ -154,6 +163,17 @@
     &.yellow {
       color: $grey-400;
       background-color: $badge-yellow;
+    }
+  }
+
+  &--offer {
+
+    #{$block-name}__title {
+      margin-bottom: 12px;
+    }
+
+    #{$block-name}__info {
+      margin-top: 0;
     }
   }
 }

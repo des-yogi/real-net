@@ -4,12 +4,12 @@
 
   @media (min-width: $screen-md) {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: calc(40px - 25px);
   }
 
   @media (min-width: $screen-lg) {
     padding-top: 48px;
-    padding-bottom: 48px;
+    padding-bottom: calc(48px - 25px);
   }
 
   $block-name:                &; // #{$block-name}__element
@@ -18,6 +18,18 @@
 
     @media (max-width: $screen-md - 1) {
       display: none;
+    }
+  }
+
+  &__container {
+
+    @media (min-width: $screen-md) {
+      padding-top: 16px;
+      padding-left: 16px;
+      padding-right: 16px;
+      margin-left: -16px;
+      margin-right: -16px;
+      padding-bottom: 25px;
     }
   }
 
@@ -31,6 +43,7 @@
 
   &__item {
     height: auto;
+    transition: all $transition-time;
 
     @media (max-width: $screen-md - 1) {
       max-width: 400px;
@@ -40,6 +53,14 @@
 
     @media (min-width: $screen-md) {
       width: 312px;
+    }
+
+    &:hover,
+    &:focus {
+
+      @media (min-width: $screen-md) {
+        transform: translateY(-10px);
+      }
     }
 
     &:nth-child(1) {
@@ -98,6 +119,10 @@
 
     @media (max-width: $screen-md - 1) {
       margin-bottom: 40px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 16px;
     }
   }
 

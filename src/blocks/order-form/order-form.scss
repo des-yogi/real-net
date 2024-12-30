@@ -77,10 +77,6 @@
     @include col(lg, 6);
   }
 
-  &__form {
-
-  }
-
   &__input-group {
 
     @media (min-width: $screen-md) {
@@ -147,7 +143,7 @@
           background-repeat: no-repeat;
           background-size: 204px 199px;
           background-position: center;
-          background-image: url(/img/order-arrow-1.png);
+          background-image: url('../img/order-arrow-1.png');
         }
       }
     }
@@ -177,7 +173,7 @@
           background-repeat: no-repeat;
           background-size: 258px 201px;
           background-position: center;
-          background-image: url(/img/order-arrow-2.png);
+          background-image: url('../img/order-arrow-2.png');
         }
       }
     }
