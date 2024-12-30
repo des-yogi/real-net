@@ -23,6 +23,7 @@
     border-radius: $border-radius--lg;
     box-shadow: 0 0 20px 3px rgba(13, 16, 29, 0.50) inset;
     overflow: hidden;
+    isolation: isolate;
 
     @media (max-width: $screen-md - 1) {
       margin-right: -16px;
