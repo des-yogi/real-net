@@ -127,7 +127,6 @@
     //background-color: $secondary-color;
     box-shadow: 0 2px 9.8px 1px rgba(20, 39, 46, 0.60),
                 0 0 10px 1px rgba(13, 16, 29, 0.50) inset;
-    overflow: hidden;
 
     @include border-gradient (
       1px,
@@ -164,6 +163,8 @@
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-bottom-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
     //background-image: url(/img/benefits-card-bg.jpg);
     //background-image: url(/img/benefits-card-bg.webp);
     opacity: 0.7;

@@ -424,10 +424,11 @@ a {
   position: relative;
   background-color: $background-color;
   background-clip: padding-box; /* !importanté */
-  border: solid $border-width transparent; /* !importanté */
+  border: solid $border-width rgba(255, 255, 255, 0); /* !importanté */
   border-radius: $border-radius;
 
   &::after {
+    display: block;
     content: "";
     position: absolute;
     top: 0;
@@ -438,6 +439,9 @@ a {
     margin: -$border-width; /* !importanté */
     border-radius: inherit; /* !importanté */
     background: $gradient;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
   }
 }
 

@@ -26,6 +26,7 @@
     border-radius: $border-radius--lg;
     box-shadow: 0 0 20px 3px rgba(13, 16, 29, 0.50) inset;
     overflow: hidden;
+    isolation: isolate;
 
     @media (max-width: $screen-md - 1) {
       margin-right: -16px;
@@ -49,14 +50,16 @@
   &__container {
     width: 100%;
     padding: 16px;
+
     @include border-gradient (
       1px,
       $border-radius,
       $secondary-color,
       $border-gradient
     );
+
     box-shadow: 0 2px 9.8px 1px rgba(20, 39, 46, 0.60),
-                0 0px 10px 1px rgba(13, 16, 29, 0.50) inset;
+                0 0 10px 1px rgba(13, 16, 29, 0.50) inset;
   }
 
   &__inner-row {
@@ -103,10 +106,6 @@
     }
   }
 
-  &__inner-col-img {
-
-  }
-
   &__steps {
     display: flex;
     flex-direction: column;
@@ -114,7 +113,7 @@
 
     @media (min-width: $screen-lg) {
       gap: 64px;
-      padding-top: 60px;
+      padding-top: 50px;
       padding-left: 20px;
     }
   }
@@ -123,7 +122,7 @@
 
     @media (min-width: $screen-lg) {
       //position: relative;
-      width: 274px;
+      width: 278px;
     }
 
     &:nth-child(1) {
