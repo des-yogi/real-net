@@ -144,11 +144,11 @@ a {
   text-decoration: none;
   color: $link-color;
   background-color: transparent;
-  transition: color $transition-time;
+  transition: all $transition-time;
 
   &:hover,
   &:focus {
-    text-decoration: initial;
+    text-decoration: underline;
     color: $link-color--hover;
   }
 
@@ -420,11 +420,12 @@ a {
   }
 }
 
+/*
 @mixin border-gradient ($border-width, $border-radius, $background-color, $gradient) {
   position: relative;
   background-color: $background-color;
-  background-clip: padding-box; /* !importanté */
-  border: solid $border-width rgba(255, 255, 255, 0); /* !importanté */
+  background-clip: padding-box; // !importanté
+  border: solid $border-width rgba(255, 255, 255, 0); // !importanté
   border-radius: $border-radius;
 
   &::after {
@@ -436,14 +437,15 @@ a {
     bottom: 0;
     left: 0;
     z-index: -1;
-    margin: -$border-width; /* !importanté */
-    border-radius: inherit; /* !importanté */
+    margin: -$border-width; // !importanté
+    border-radius: inherit; // !importanté
     background: $gradient;
     // background-position: center;
     // background-repeat: no-repeat;
     // background-size: cover;
   }
 }
+*/
 
 // background-image: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color);
 // background-image: svg-load('../blocks/sprite-svg/svg/chevron-down.svg', fill=$text-color);

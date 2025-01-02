@@ -1,5 +1,194 @@
 .accordion {
 
+
   $block-name:                &; // #{$block-name}__element
 
+  &__wrapper {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+  }
+
+  &__row {
+    gap: 16px 0;
+  }
+
+  &__col-faq {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 8, 8, 16px);
+    @include col(lg, 8);
+  }
+
+  &__col-help {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 8, 8, 16px);
+    @include col(lg, 4);
+  }
+
+  &__item {
+    padding: 16px;
+
+    @include border-gradient (
+      1px,
+      $border-radius,
+      $secondary-color,
+      $border-gradient
+    );
+    transition: all $transition-time;
+
+    & + & {
+      margin-top: 16px;
+    }
+
+    &:has(#{$block-name}__btn:hover),
+    &:has(#{$block-name}__btn:focus) {
+
+      @include border-gradient (
+        1px,
+        $border-radius,
+        $secondary-color,
+        $main-color
+      );
+      box-shadow: 0 0 10px 0 rgba(65, 209, 130, 0.35),
+                  0 0 6px 1px rgba(13, 16, 29, 0.40) inset;
+
+      #{$block-name}__icon {
+        background-color: $main-dark;
+      }
+    }
+  }
+
+  &__header {
+    margin: 0 !important;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-align: initial;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    user-select: none;
+
+    &[aria-expanded=true] {
+
+      #{$block-name}__icon {
+
+        span::after {
+          transform: translate(-50%, -50%) rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__icon {
+    flex: 0 0 52px;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 32px;
+    background-color: $main-color;
+    border-radius: $border-radius;
+    transition: background $transition-time;
+
+    span {
+      display: block;
+      position: relative;
+      width: 14px;
+      height: 2px;
+      background-color: $secondary-color;
+      border-radius: 2px;
+
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        width: 14px;
+        height: 2px;
+        background-color: $secondary-color;
+        transition: transform $transition-time;
+      }
+    }
+  }
+
+  &__body {
+    padding-top: 16px;
+  }
+
+  &__help-wrapper {
+
+    @media (min-width: $screen-lg) {
+      position: sticky;
+      top: 24px;
+    }
+  }
+
+  &__help {
+    padding: 16px;
+    @include border-gradient (
+      1px,
+      $border-radius,
+      $secondary-color,
+      $border-gradient
+    );
+  }
+
+  &__help-title {
+    margin-top: 0 !important;
+  }
+
+  &__help-desc {
+    margin-bottom: 24px;
+  }
+
+  &__help-city {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    position: relative;
+    margin: 0 0 8px;
+
+    &::after {
+      flex: 1 1 auto;
+      display: block;
+      content: "";
+      width: auto;
+      height: 1px;
+      background-color: $secondary-light;
+    }
+
+    span {
+      flex: 0 0 auto;
+    }
+  }
+
+  &__tel-link {
+    display: inline-flex;
+    padding: 8px 0;
+    color: $text-color;
+  }
 }

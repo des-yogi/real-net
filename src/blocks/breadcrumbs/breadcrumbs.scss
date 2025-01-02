@@ -1,39 +1,40 @@
-$line-height:                 1.375em !default;
-$text-color:                  hsl(0, 0%, 10%) !default;
-
 .breadcrumbs {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 
-  $block-name:                &;
-  // #{$block-name}__element
-
-  &__list {
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
+  @media (min-width: $screen-md) {
+    margin-bottom: 32px;
   }
 
+  $block-name:             &;  // #{$block-name}__element
+
+  &__list {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-bottom: 6px;
+    overflow-x: auto;
+  }
 
   &__item {
-    display: inline-block;
-    vertical-align: baseline;
+    display: inline-flex;
+    align-items: center;
     max-width: 100%;
-    margin-right: 0.6em;
-    margin-bottom: 0.5em;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin-right: 12px;
+    //text-overflow: ellipsis;
+    //margin-bottom: 0.5em;
 
     @media (min-width: $screen-md) {
       margin-bottom: 0;
     }
 
     &:not(:last-child)::after {
-      content: '|'; // U+276F, HTML-код &#10095; CSS-код  \276F - Прававя угловая скобка
+      content: '\276F'; // U+276F, HTML-код &#10095; CSS-код  \276F - Прававя угловая скобка
       display: inline-block;
-      margin-left: 0.8em;
+      margin-left: 12px;
+      font-size: 10px;
       font-weight: 700;
-      color: $text-muted;
+      color: $grey-200;
     }
 
     &:last-child {
@@ -46,17 +47,21 @@ $text-color:                  hsl(0, 0%, 10%) !default;
   }
 
   &__link {
+    display: inline-flex;
+    align-items: center;
     max-width: 100%;
-    font-size: 14px;
-    font-weight: 500;
-    color: $text-muted;
+    padding: 6px 0;
+    font-size: $font-size-sm;
+    font-weight: inherit;
+    color: $grey-200;
     text-decoration: none;
     white-space: nowrap;
+    letter-spacing: 0.224px;
 
     &:hover,
     &:focus {
       color: $main-color;
-      //text-decoration: none;
+      text-decoration: none;
     }
   }
 }

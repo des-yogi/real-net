@@ -1,0 +1,61 @@
+.text-block-heading {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 48px;
+    padding-bottom: 48px;;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 8, 8, 16px);
+    @include col(lg, 8);
+  }
+
+  &__title {
+    display: inline-flex;
+    position: relative;
+    margin: 0 0 8px;
+    font-size: $font-size !important;
+    color: $grey-200;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 1px;
+      background-color: $main-color;
+    }
+
+    &::after {
+      right: -68px;
+    }
+  }
+
+  &__slogan {
+    margin: 0 0 24px;
+    hyphens: none;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__body {
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

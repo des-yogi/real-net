@@ -1,3 +1,83 @@
 <!--DEV
 @ @include('blocks/accordion/accordion.html')
 -->
+
+<article class="container  accordion__wrapper">
+
+  <div class="section-heading  section-heading--inner">
+    <h2 class="section-heading__title">FAQ</h2>
+    <p class="h2 section-heading__slogan">Постараємось відповісти на всі ваші запитання</p>
+    <p class="section-heading__intro"></p>
+  </div>
+
+  <div class="row  accordion__row">
+
+    <div class="accordion__col-faq">
+      <div class="accordion" id="faq">
+
+        <div class="accordion__item">
+          <h3 class="h6  accordion__header">
+            <button class="accordion__btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+              <span> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. #1</span>
+              <span class="accordion__icon" role="presentaion"><span></span></span>
+            </button>
+          </h3>
+          <div id="collapse-1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+            <div class="accordion__body">
+              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion__body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <h3 class="h6  accordion__header">
+            <button class="accordion__btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+              <span>Accordion Item #2</span>
+              <span class="accordion__icon" role="presentaion"><span></span></span>
+            </button>
+          </h3>
+          <div id="collapse-2" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion__body">
+              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion__body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <h3 class="h6  accordion__header">
+            <button class="accordion__btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+              <span>Accordion Item #3</span>
+              <span class="accordion__icon" role="presentaion"><span></span></span>
+            </button>
+          </h3>
+          <div id="collapse-3" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion__body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion__body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion__col-help">
+      <div class="accordion__help-wrapper">
+        <section class="accordion__help">
+          <h3 class="h4  accordion__help-title">Не змогли знайти відповідь на потрібне питання?</h3>
+          <p class="accordion__help-desc">Спробуйте подивитися чи є воно на <a href="#">головній сторінці FAQ</a>, або зателефонуйте на одну із наших гарячих ліній зв’язку</p>
+          <p class="accordion__help-city"><span>Номера телефонів (Київ)</span></p>
+
+          <ul class="list-nostyled  accordion__tel-list">
+            <li class="accordion__list-item">
+              <a href="tel:+380933069454" class="accordion__tel-link">+38 (093) 306 94 54</a>
+            </li>
+            <li class="accordion__list-item">
+              <a href="tel:+380933069454" class="accordion__tel-link">+38 (093) 306 94 54</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+  </div>
+
+</article>

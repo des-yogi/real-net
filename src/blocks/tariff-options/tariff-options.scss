@@ -1,0 +1,68 @@
+.tariff-options {
+  //padding-top: 0;
+  padding-bottom: 32px;
+
+  @media (min-width: $screen-md) {
+    //padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-lg) {
+    //padding-top: 0;
+    padding-bottom: 48px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__row {
+    gap: 16px 0;
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 4, 8, 16px);
+    @include col(lg, 4);
+  }
+
+  &__card {
+    position: relative;
+    height: 100%;
+    padding: 16px;
+    background: linear-gradient(165deg, #426875 5%, #395B67 10.4%, #2A4954 21%, rgba(37, 65, 75, 0) 50%);
+    border-radius: $border-radius;
+    overflow: hidden;
+    //background: linear-gradient(180deg, #233941 14.73%, rgba(35, 57, 65, 0.00) 100%);
+
+    & > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::after {
+      //display: block;
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 1px;
+      right: 1px;
+      bottom: 1px;
+      left: 1px;
+      background: linear-gradient(to bottom, #233941 14.73%, rgba(35, 57, 65, 0) 99%);
+      border-radius: $border-radius;
+      //border: 1px solid #426875;
+    }
+  }
+
+  &__card-title {
+    margin: 0 0 16px;
+  }
+
+  &__card-text {
+    margin: 0;
+    color: $grey-200;
+  }
+}
