@@ -46,7 +46,9 @@
     "news-block": [],
     "order-form": [],
     "section-heading": [],
-    "gpon-hero-card": []
+    "gpon-hero-card": [],
+    "tariff-options": [],
+    "text-block-heading": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
