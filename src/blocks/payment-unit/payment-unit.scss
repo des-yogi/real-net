@@ -1,0 +1,109 @@
+.payment-unit {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    gap: 32px 0;
+  }
+
+  &__col-text {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 8, 8, 16px);
+    @include col(lg, 6);
+  }
+
+  &__col-img {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 8, 8, 16px);
+    @include col(lg, 6);
+  }
+
+  &__content {
+
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    //align-items: center;
+    gap: 16px;
+    margin-top: 32px;
+
+    .btn {
+      flex: 0 0 auto;
+    }
+
+    &--card {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__img-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 48px 20px;
+
+    @include border-gradient (
+      1px,
+      $border-radius,
+      $secondary-color,
+      $border-gradient
+    );
+  }
+
+  &__btn-card {
+    flex: 0 1;
+    flex-basis: 202px;
+    max-width: 202px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    height: 100%;
+    font-weight: 500;
+    letter-spacing: 0.04px;
+    color: $text-color;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+
+      #{$block-name}__btn-card-img {
+        border-color: $main-color;
+        box-shadow: 0 0 10px 0 rgba(65, 209, 130, 0.35),
+                    0 0 6px 1px rgba(13, 16, 29, 0.40) inset;
+      }
+    }
+
+    p {
+      flex: 0 0 auto;
+      margin: 0;
+    }
+  }
+
+  &__btn-card-img {
+    flex: 0 0 auto;
+    border-radius: $border-radius--sm;
+    border: 1px solid #3B6368;
+    transition: all $transition-time;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

@@ -55,7 +55,9 @@
     "product": [],
     "product-slider": [],
     "faq-page": [],
-    "faq-nav": []
+    "faq-nav": [],
+    "payment": [],
+    "payment-unit": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
