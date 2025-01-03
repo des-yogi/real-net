@@ -26,6 +26,10 @@
     @include col(xs, 12, $grid-columns, 16px);
     @include col(md, 4, 8, 16px);
     @include col(lg, 4);
+
+    &--add {
+      @include col(lg, 3);
+    }
   }
 
   &__card {
@@ -53,8 +57,22 @@
       left: 1px;
       background: linear-gradient(to bottom, #233941 14.73%, rgba(35, 57, 65, 0) 99%);
       border-radius: $border-radius;
-      //border: 1px solid #426875;
     }
+
+/*    &--add {
+
+      @include border-gradient (
+        1px,
+        $border-radius,
+        $secondary-color,
+        $border-gradient
+      );
+      box-shadow: 0 0 14px 2px rgba(13, 16, 29, 0.65) inset;
+
+      &::before {
+        display: none;
+      }
+    }*/
   }
 
   &__card-title {
@@ -64,5 +82,13 @@
   &__card-text {
     margin: 0;
     color: $grey-200;
+  }
+
+  &--add {
+    padding-bottom: 0 !important;
+
+    & + & {
+      margin-top: 40px;
+    }
   }
 }

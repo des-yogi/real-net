@@ -1,0 +1,40 @@
+<!--DEV
+@ @include('blocks/shop-card/shop-card.html', {
+  "img": "shop-card-img",
+  "title": "Headline in two storokes, that’s a second one",
+  "descr": "Тут текст буде максимум на два рядки, інакше карточка буде надто довгою",
+  "oldPrice": "1399",
+  "price": "1199",
+  "tag": "Акція",
+  "tagColorClass": "purple"
+})
+-->
+
+<article class="shop-card">
+  <div class="shop-card__img-wrapper">
+    <div class="embed-responsive embed-responsive--1-1  shop-card__img">
+      <picture>
+        <source srcset="img/@@img.webp" media="(min-width: 320px)" type="image/webp">
+        <source srcset="img/@@img.png" media="(min-width: 320px)">
+        <img src="img/@@img.png" alt="Alt text" width="561" height="561" loading="lazy">
+      </picture>
+    </div>
+  </div>
+  <div class="shop-card__text">
+    <div class="shop-card__heading">
+      <h3 class="h5 shop-card__title">@@title</h3>
+      <p class="shop-card__descr">@@descr</p>
+    </div>
+    <div class="shop-card__footer">
+      <p class="h3  shop-card__price">
+        <span class="shop-card__old-price">@@oldPrice</span>
+        <span class="shop-card__current-price">@@price грн</span>
+      </p>
+      <a href="#" class="btn  btn--link  shop-card__more">
+        <span>Детальніше</span>
+        <svg width="16" height="16" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+      </a>
+    </div>
+  </div>
+  <span class="shop-card__tag  @@tagColorClass"><strong>@@tag</strong></span>
+</article>
