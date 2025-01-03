@@ -1,0 +1,32 @@
+.faq-page {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    gap: 24px 0;
+  }
+
+  &__col-nav {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 2, 8, 16px);
+    @include col(lg, 2);
+  }
+
+  &__col-content {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 6, 8, 16px);
+    @include col(lg, 10);
+  }
+}

@@ -1,0 +1,72 @@
+.product-slider {
+
+  @media (min-width: $screen-lg) {
+    position: sticky;
+    top: 16px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__main {
+    margin-bottom: 6px;
+    //isolation: isolate;
+  }
+
+  &__thumb {
+    padding: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  &__slide,
+  &__slide-thumb {
+    border: 1px solid #3B6368;
+    background-color: $secondary-color;
+    border-radius: $border-radius;
+    box-shadow: 0 0 14px 2px rgba(13, 16, 29, 0.65) inset;
+  }
+
+  &__img {
+
+    img {
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__slide {
+    padding: 16px;
+    //border-radius: $border-radius;
+  }
+
+  &__slide-thumb {
+    width: 104px;
+    height: 78px;
+    padding: 4px;
+    cursor: pointer;
+    transition: all $transition-time;
+    //border-radius: $border-radius;
+
+    // @media (min-width: $screen-md) {
+    //   width: 156px;
+    //   height: 115px;
+    // }
+
+    // @media (min-width: $screen-xl) {
+    //   width: 184px;
+    //   height: 138px;
+    // }
+
+    &.swiper-slide-thumb-active,
+    &:hover {
+      border-color: $main-color;
+      box-shadow: 0 0 10px 0 rgba(65, 209, 130, 0.35),
+                  0 0 6px 1px rgba(13, 16, 29, 0.40) inset;
+    }
+
+    img {
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+}

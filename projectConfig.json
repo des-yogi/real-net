@@ -51,7 +51,11 @@
     "text-block-heading": [],
     "add-service-card": [],
     "shop": [],
-    "shop-card": []
+    "shop-card": [],
+    "product": [],
+    "product-slider": [],
+    "faq-page": [],
+    "faq-nav": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
