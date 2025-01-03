@@ -55,6 +55,11 @@
     height: 32px;
     color: $text-color;
     user-select: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
   }
 
   &__service-link {
@@ -69,10 +74,6 @@
 
   &__tel-link {
     font-size: $font-size-sm;
-  }
-
-  &__nav {
-
   }
 
   &__nav-list,
@@ -178,6 +179,11 @@
       height: 8px;
       background-color: rgba($main-dark, 0.12);
       border-radius: 50%;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: inherit;
     }
   }
 }
