@@ -1,0 +1,152 @@
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px 0;
+  height: 100%;
+  position: relative;
+
+  @media (max-width: $screen-sm - 1) {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &:has(#{$block-name}__more:hover),
+  &:has(#{$block-name}__more:focus) {
+
+    #{$block-name}__title {
+      color: $main-color;
+    }
+
+    #{$block-name}__img-wrapper {
+      box-shadow: 0 0 10px 0 rgba(65, 209, 130, 0.35),
+                  0 0 6px 1px rgba(13, 16, 29, 0.40) inset;
+    }
+  }
+
+  &__img-wrapper {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    padding: 4px 0;
+    @include border-gradient (
+      1px,
+      $border-radius,
+      $secondary-color,
+      $border-gradient
+    );
+    box-shadow: 0 0 14px 2px rgba(13, 16, 29, 0.65) inset;
+  }
+
+  &__img {
+    display: block;
+    max-width: 160px;
+    //margin: 0 auto;
+
+    @media (min-width: $screen-md) {
+      max-width: 188px;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 240px;
+    }
+
+    @media (min-width: $screen-lg) {
+      max-width: 150px;
+    }
+
+    img {
+      display: block;
+      //width: auto;
+      //height: 100%;
+      //max-width: 160px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    margin: 0;
+    transition: color $transition-time;
+  }
+
+  &__descr {
+    margin-top: 8px;
+    font-size: $font-size-sm;
+    hyphens: none;
+    color: $grey-200;
+  }
+
+  &__price {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+    margin: 0 0 4px;
+  }
+
+  &__old-price {
+    color: $grey-200;
+    text-decoration: line-through;
+  }
+
+  &__more {
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 16px;
+    font-size: $font-size-sm;
+    font-weight: 700;
+    letter-spacing: 0.224px;
+    line-height: 1;
+    border-radius: $border-radius;
+
+    &.purple {
+      color: $text-color;
+      background-color: $badge-purple;
+    }
+
+    &.red {
+      color: $text-color;
+      background-color: $color-danger;
+    }
+
+    &.green {
+      color: $grey-400;
+      background-color: $badge-green;
+    }
+
+    &.yellow {
+      color: $grey-400;
+      background-color: $badge-yellow;
+    }
+  }
+}

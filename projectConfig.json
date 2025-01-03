@@ -48,7 +48,10 @@
     "section-heading": [],
     "gpon-hero-card": [],
     "tariff-options": [],
-    "text-block-heading": []
+    "text-block-heading": [],
+    "add-service-card": [],
+    "shop": [],
+    "shop-card": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

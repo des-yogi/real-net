@@ -1,0 +1,30 @@
+.add-service-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px 0;
+  height: 100%;
+  padding: 16px;
+
+  @include border-gradient (
+    1px,
+    $border-radius,
+    $secondary-color,
+    $border-gradient
+  );
+  box-shadow: 0 0 14px 2px rgba(13, 16, 29, 0.65) inset;
+
+
+  &__title,
+  &__price {
+    //margin: 0 0 24px;
+    margin: 0;
+  }
+
+  &__price {
+    color: $main-color;
+  }
+}

@@ -33,6 +33,13 @@
     }
   }
 
+  &__content {
+
+    &--add {
+      margin-top: 32px;
+    }
+  }
+
   &__row {
 
     @media (max-width: $screen-md - 1) {
