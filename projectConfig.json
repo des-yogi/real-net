@@ -57,7 +57,11 @@
     "faq-page": [],
     "faq-nav": [],
     "payment": [],
-    "payment-unit": []
+    "payment-unit": [],
+    "manuals": [],
+    "video": [],
+    "speedtest": [],
+    "speedtest-widget": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
