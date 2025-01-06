@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Перевірка швидкості</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо наші вибачення, але це ускладнює використання цього сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main class="main">
+
+        <div class="container  section-heading  section-heading--h1">
+          <h1 class="section-heading__title">Перевірка швидкості</h1>
+          <p class="h1 section-heading__slogan">Детальна інформація про перевірку швидкості</p>
+          <p class="section-heading__intro">RealNET — інтернет-провайдер, що прагне забезпечити швидкий, надійний і стабільний інтернет-зв'язок для кожного клієнта. Ми пропонуємо інноваційні рішення та підтримку на всіх етапах.</p>
+        </div>
+
+        <div class="container  speedtest">
+
+          <div class="section-heading  section-heading--inner">
+            <h2 class="section-heading__title">Перевірка швидкості</h2>
+            <p class="h2 section-heading__slogan">Section heading</p>
+            <p class="section-heading__intro"></p>
+          </div>
+
+          <ul class="list-nostyled  row  speedtest__row">
+            <li class="speedtest__col">
+              <div class="speedtest__card">
+                <img src="img/router-img.svg" alt="" width="128" height="128">
+                <div class="speedtest__card-text">
+                  <h3 class="speedtest__card-title">Підготовка до тестування</h3>
+                  <p>Щоб отримати коректні результати потрібно завершити активні задачі на пристрої з якого здійснюватиметься тестування: зупинити завантаження файлів, вимкнути музику тощо.</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="speedtest__col">
+              <div class="speedtest__card">
+                <img src="img/box-img.svg" alt="" width="128" height="128">
+                <div class="speedtest__card-text">
+                  <h3 class="speedtest__card-title">Дротове тестування</h3>
+                  <p>Важливо проводити тестування підключивши інтернет-кабель напряму до комп'ютера/ноутбука. Навіть при дротовому з'єднанні від WiFi роутера будуть втрати швидкості через додаткову ланку у з'єднанні (роутер).</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="speedtest__col">
+              <div class="speedtest__card">
+                <img src="img/cloud-img.svg" alt="" width="128" height="128">
+                <div class="speedtest__card-text">
+                  <h3 class="speedtest__card-title">Бездротове тестування</h3>
+                  <p>Якщо немає можливості перевірити швидкість дротовим з'єднанням - потрібно відключити від WiFi мережі усі пристрої, окрім пристрою з якого здійснюватиметься тестування швидкості.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+
+        @@include('blocks/speedtest-widget/speedtest-widget.html')
+
+        @@include('blocks/accordion/accordion.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/mob-nav/mob-nav.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

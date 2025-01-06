@@ -1,0 +1,70 @@
+.speedtest {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    gap: 16px 0;
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 4, 8, 16px);
+    @include col(lg, 4);
+  }
+
+  &__card {
+    $border-width: 1px;
+    height: 100%;
+    padding: 16px;
+    position: relative;
+    background: linear-gradient(180deg, #233941 15%, rgba(35, 57, 65, 0) 100%);
+    background-clip: padding-box; // !importanté
+    border: solid $border-width rgba(255, 255, 255, 0); // !importanté
+    border-radius: $border-radius;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -$border-width; // !importanté
+      border-radius: inherit; // !importanté
+      background: linear-gradient(160deg, #426875 5%, #395B67 10.4%, #2A4954 21%, rgba(37, 65, 75, 0) 56%);
+    }
+
+    img {
+      display: block;
+      width: 128px;
+      height: 128px;
+      margin: 0 auto;
+    }
+  }
+
+  &__card-text {
+
+    p {
+      color: $grey-200;
+    }
+  }
+
+  &__card-title {
+    margin-top: 24px;
+  }
+}
+
