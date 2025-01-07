@@ -248,9 +248,46 @@ abbr[title] {
 }
 
 blockquote {
-  padding: 0;
-  margin-left: 0;
-  margin-right: 0;
+  padding: 24px;
+  margin: 1.5em 0;
+  background-color: $secondary-color;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
+
+  & > *:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+    margin-bottom: 0;
+
+    &::before,
+    &::after {
+      display: inline-flex;
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-color: transparent;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 24px;
+      background-image: svg-load('../blocks/sprite-svg/svg/quote.svg', fill=$main-color);
+    }
+
+    &::after {
+      align-self: flex-end;
+      transform: scale(-1, -1);
+    }
+
+    & + * {
+      margin-top: 8px;
+    }
+  }
+
+  footer {
+    font-weight: 300;
+    letter-spacing: 0.224px;
+  }
 }
 
 dt {

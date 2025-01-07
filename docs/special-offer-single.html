@@ -278,7 +278,7 @@
             <div class="sp-offer__col-sidebar">
               <div class="sp-offer__sidebar">
 
-                <div class="countdown__wrapper">
+                <div class="countdown__wrapper">
 
                   <div class="countdown" data-deadline="January 31 2025 23:59:59 GMT+0300">
                     <h2 class="h3  countdown__title">До кінця акції залишилось</h2>
@@ -306,7 +306,7 @@
                     </div>
                   </div>
 
-                </div>
+                </div>
 
                 <section class="sp-offer-other">
                   <h2 class="h3  sp-offer-other__title">Інші пропозиції</h2>
@@ -1213,76 +1213,27 @@
     </div>
   </div>
 
+  <div class="modal fade  order-form" id="orderForm" tabindex="-1" aria-labelledby="orderFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="orderFormLabel">Modal title</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->
   <script src="js/script.min.js"></script>
 
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-
-      const countdownArr = document.getElementsByClassName('countdown');
-      if (!countdownArr) { return; }
-
-      function getTimeRemaining(endtime) {
-        let t = Date.parse(endtime) - Date.parse(new Date());
-        let seconds = Math.floor((t / 1000) % 60);
-        let minutes = Math.floor((t / 1000 / 60) % 60);
-        let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-        let days = Math.floor(t / (1000 * 60 * 60 * 24));
-        return {
-          'total': t,
-          'days': days,
-          'hours': hours,
-          'minutes': minutes,
-          'seconds': seconds
-        };
-      }
-
-      function initializeClock(id, endtime) {
-        const clock = id;
-        const daysSpan = clock.querySelector('.days');
-        const hoursSpan = clock.querySelector('.hours');
-        const minutesSpan = clock.querySelector('.minutes');
-        const secondsSpan = clock.querySelector('.seconds');
-        const countdownContainer = clock.querySelector('.countdown__inner');
-        const deadlineMessage = clock.querySelector('.countdown__deadline-message');
-        const title = clock.querySelector('.countdown__title');
-        const timeinterval = setInterval(updateClock, 1000);
-
-        function updateClock() {
-          let t = getTimeRemaining(endtime);
-
-          daysSpan.innerHTML = t.days;
-          hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-          minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-          secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-          if (t.total <= 0) {
-            countdownContainer.classList.add('hidden');
-            title.classList.add('hidden');
-            deadlineMessage.classList.add('visible');
-            clearInterval(timeinterval);
-            return true;
-          }
-        }
-        updateClock();
-      }
-
-      // var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
-      //const deadline = 'August 31 2021 18:59:00 GMT+0300'; //GMT+0300 - летнее время
-
-      for (let j = 0; j < countdownArr.length; j++) {
-        let currentItem = countdownArr[j];
-        let currentItemDeadline = currentItem.dataset.deadline;
-        if (currentItemDeadline === '') {
-          continue;
-        }
-        initializeClock(currentItem, currentItemDeadline);
-      }
-    });
-
-  </script>
 
 </body>
 </html>

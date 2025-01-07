@@ -1,0 +1,91 @@
+<!--DEV
+@ @include('blocks/management-form/management-form.html')
+-->
+
+<div class="container  management-form__wrapper">
+  <div class="row  management-form__row">
+
+    <div class="management-form__col-form">
+      <div class="management-form__inner">
+        <div class="section-heading  section-heading--white  section-heading--news">
+          <h2 class="section-heading__title">Форма зв’язку</h2>
+          <p class="h2 section-heading__slogan">Залишайте своє повідомлення директору — ми цінуємо вашу думку!</p>
+        </div>
+
+        <form class="order-form" action="#" method="post">
+
+          <label class="field-text">
+            <span class="field-text__name">Ваше ім’я<sup>*</sup></span>
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" name="name" value="" placeholder="Ім’я">
+              <span class="field-text__help-text" data-error="[[+tv.error.name]]">Пояснение</span>
+            </span>
+          </label>
+
+          <div class="order-form__input-group">
+            <label class="field-text">
+              <span class="field-text__name">Ваш email<sup>*</sup></span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="email" name="email" value="" placeholder="@mail.com">
+                <span class="field-text__help-text" data-error="[[+tv.error.email]]"></span>
+              </span>
+            </label>
+
+            <label class="field-text">
+              <span class="field-text__name">Ваш номер телефону</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input  phone-mask" type="tel" name="tel" value="" placeholder="+38 066 172 03 12">
+                <span class="field-text__help-text" data-error="[[+tv.error.tel]]"></span>
+              </span>
+            </label>
+          </div>
+
+          <label class="field-text">
+            <span class="field-text__name">Ваше повідомлення</span>
+            <span class="field-text__input-wrap">
+              <textarea class="field-text__input" name="message" rows="4" placeholder="Text placeholder"></textarea>
+              <span class="field-text__help-text" data-error="[[+tv.error.message]]"></span>
+            </span>
+          </label>
+
+
+          <div class="field-actions">
+            <!-- <div class="field-actions__text">* — обязательные поля</div> -->
+            <div class="field-actions__agreement">
+
+              <div class="field-checkbox" style="margin: 8px 0 40px;">
+                <label class="field-checkbox__name">
+                  <input class="field-checkbox__input" type="checkbox" name="agreement" checked>
+                  <span class="field-checkbox__name-text">Я погоджуюсь на обробку <a href="#">персональних даних</a></span>
+                </label>
+              </div>
+
+              <div class="order-form__controls">
+                <div class="order-form__captcha">
+                  <img src="img/reCaptcha.gif" alt="" width="302" height="74" loading="lazy" style="display: block;">
+                </div>
+                <div class="field-actions__btn">
+                  <button class="btn" type="submit" name="submit">
+                    <span>Відправити</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+    <div class="management-form__col-img">
+      <div class="embed-responsive embed-responsive--1-1  management-form__img">
+        <picture>
+          <img src="img/img-placeholder.jpg" alt="" width="" height="" loading="lazy">
+        </picture>
+      </div>
+    </div>
+
+  </div>
+</div>

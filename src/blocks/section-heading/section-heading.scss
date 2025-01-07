@@ -43,6 +43,10 @@
   &__slogan {
     margin: 0;
     hyphens: none;
+
+    span {
+      color: $main-color;
+    }
   }
 
   &__intro {
@@ -137,6 +141,18 @@
     #{$block-name}__intro {
       max-width: 500px;
       color: $grey-200;
+    }
+  }
+
+  &--error-404 {
+
+    #{$block-name}__title {
+      color: $main-color;
+
+      &::before,
+      &::after {
+        background-color: currentColor;
+      }
     }
   }
 }

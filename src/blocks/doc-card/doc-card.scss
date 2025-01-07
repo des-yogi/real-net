@@ -1,0 +1,63 @@
+.doc-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px 0;
+  height: 100%;
+  padding: 20px 16px 16px;
+  color: $text-color;
+  box-shadow: 0 2px 9.8px 1px rgba(20, 39, 46, 0.60),
+              0 0 10px 1px rgba(13, 16, 29, 0.50) inset;
+
+  @include border-gradient (
+    1px,
+    $border-radius,
+    $secondary-color,
+    linear-gradient(160deg, #3B6368 5%, #2A4954 22%, #25414B)
+  );
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $text-color;
+    @include border-gradient (
+      1px,
+      $border-radius,
+      $secondary-color,
+      linear-gradient(160deg, $main-color 5%, $main-color 22%, $main-color)
+    );
+    box-shadow: 0 0 10px 0 rgba(65, 209, 130, 0.35),
+                0 0 6px 1px rgba(13, 16, 29, 0.40) inset;
+  }
+
+  &__body {
+
+    p {
+      margin-top: 0;
+      hyphens: none;
+      color: $grey-200;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    color: inherit;
+  }
+
+  &__link-false {
+    gap: 8px !important;
+    color: $main-color;
+  }
+
+  &--jobs {
+
+    #{$block-name}__title {
+      padding-bottom: 16px;
+      border-bottom: 1px solid $secondary-light;
+    }
+  }
+}
+

@@ -35,73 +35,9 @@
 
   @@include('blocks/mob-nav/mob-nav.html')
 
+  @@include('blocks/modal/modal.html')
+
   @@include('_include/page_bottom.html')
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-
-      const countdownArr = document.getElementsByClassName('countdown');
-      if (!countdownArr) { return; }
-
-      function getTimeRemaining(endtime) {
-        let t = Date.parse(endtime) - Date.parse(new Date());
-        let seconds = Math.floor((t / 1000) % 60);
-        let minutes = Math.floor((t / 1000 / 60) % 60);
-        let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-        let days = Math.floor(t / (1000 * 60 * 60 * 24));
-        return {
-          'total': t,
-          'days': days,
-          'hours': hours,
-          'minutes': minutes,
-          'seconds': seconds
-        };
-      }
-
-      function initializeClock(id, endtime) {
-        const clock = id;
-        const daysSpan = clock.querySelector('.days');
-        const hoursSpan = clock.querySelector('.hours');
-        const minutesSpan = clock.querySelector('.minutes');
-        const secondsSpan = clock.querySelector('.seconds');
-        const countdownContainer = clock.querySelector('.countdown__inner');
-        const deadlineMessage = clock.querySelector('.countdown__deadline-message');
-        const title = clock.querySelector('.countdown__title');
-        const timeinterval = setInterval(updateClock, 1000);
-
-        function updateClock() {
-          let t = getTimeRemaining(endtime);
-
-          daysSpan.innerHTML = t.days;
-          hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-          minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-          secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-          if (t.total <= 0) {
-            countdownContainer.classList.add('hidden');
-            title.classList.add('hidden');
-            deadlineMessage.classList.add('visible');
-            clearInterval(timeinterval);
-            return true;
-          }
-        }
-        updateClock();
-      }
-
-      // var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
-      //const deadline = 'August 31 2021 18:59:00 GMT+0300'; //GMT+0300 - летнее время
-
-      for (let j = 0; j < countdownArr.length; j++) {
-        let currentItem = countdownArr[j];
-        let currentItemDeadline = currentItem.dataset.deadline;
-        if (currentItemDeadline === '') {
-          continue;
-        }
-        initializeClock(currentItem, currentItemDeadline);
-      }
-    });
-
-  </script>
 
 </body>
 </html>

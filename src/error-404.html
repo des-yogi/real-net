@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Сторінку не знайдено</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо наші вибачення, але це ускладнює використання цього сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main">
+
+        <div class="container  error-404">
+
+          <div class="section-heading  section-heading--error-404">
+            <h1 class="section-heading__title">404</h1>
+            <p class="h1 section-heading__slogan" style="margin-bottom: 24px;">Сторінку не знайдено…</p>
+            <p class="section-heading__intro  display-1">Але ми віримо, що ви знайдете те, що шукаєте</p>
+
+            <a href="index.html" class="btn  btn--link">
+              <span>Повернутися на головну</span>
+              <svg width="16" height="16" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+            </a>
+          </div>
+
+          <div class="row  error-404__row">
+            <div class="error-404__col">
+              <div class="embed-responsive  error-404__img">
+                <picture>
+                  <source srcset="img/img-placeholder.webp,
+                                  img/img-placeholder.webp 2x" media="(min-width: 1024px)" type="image/webp">
+                  <source srcset="img/img-placeholder.jpg,
+                                  img/img-placeholder.jpg 2x" media="(min-width: 1024px)">
+                    <!-- 872x491, 1305x734 2x -->
+                  <source srcset="img/img-placeholder.webp" media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/img-placeholder.jpg" media="(min-width: 768px)">
+                    <!-- 825x464 -->
+                  <source srcset="img/img-placeholder.webp" media="(min-width: 480px)" type="image/webp">
+                  <source srcset="img/img-placeholder.jpg" media="(min-width: 480px)">
+                    <!-- 815x458 -->
+                  <source srcset="img/img-placeholder.webp" media="(min-width: 320px)" type="image/webp">
+                  <source srcset="img/img-placeholder.jpg" media="(min-width: 320px)">
+                    <!-- 675x380 -->
+                  <img src="img/img-placeholder.jpg" alt="" width="1305" height="734" loading="eager">
+                </picture>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/mob-nav/mob-nav.html')
+
+  @@include('blocks/modal/modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
