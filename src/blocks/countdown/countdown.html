@@ -3,26 +3,29 @@
   "deadline": "August 31 2021 18:59:00 GMT+0300"
 })
 -->
+
 <div class="countdown" data-deadline="@@deadline">
+  <h2 class="h3  countdown__title">До кінця акції залишилось</h2>
+  <div class="countdown__deadline-message">
+    <span class="h3">Акцію завершено!</span>
+  </div>
+
   <div class="countdown__inner">
-    <div class="countdown__number" data-divider=":">
-      <span class="days countdown__time"></span>
-      <span class="countdown__text">д</span>
+    <div class="countdown__number" data-divider="|">
+      <span class="countdown__text">дн<span>і</span>:</span>
+      <span class="h3  days countdown__time"></span>
     </div>
-    <div class="countdown__number" data-divider=":">
-      <span class="hours countdown__time"></span>
-      <span class="countdown__text">ч</span>
+    <div class="countdown__number" data-divider="|">
+      <span class="countdown__text">год<span>ини</span>:</span>
+      <span class="h3  hours countdown__time"></span>
     </div>
-    <div class="countdown__number">
-      <span class="minutes countdown__time"></span>
-      <span class="countdown__text">мин</span>
+    <div class="countdown__number  countdown__number--min">
+      <span class="countdown__text">хв<span>илини</span>:</span>
+      <span class="h3  minutes countdown__time"></span>
     </div>
     <div class="countdown__number  visually-hidden">
       <span class="seconds countdown__time"></span>
       <span class="countdown__text">сек</span>
     </div>
-  </div>
-  <div class="countdown__deadline-message">
-    Акция закончена!
   </div>
 </div>

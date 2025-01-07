@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Мапа покриття</title>
+  <title>ЖК та БЦ</title>
   @@include('_include/page_head.html')
 </head>
 
@@ -19,11 +19,11 @@
 
       <main class="main">
 
-        <div class="container  section-heading  section-heading--h1">
-          <h1 class="section-heading__title">Покриття</h1>
-          <p class="h1 section-heading__slogan">Перевіряйте чи є підключення у вашому будинку</p>
-          <p class="section-heading__intro">RealNET — інтернет-провайдер, що прагне забезпечити швидкий, надійний і стабільний інтернет-зв'язок для кожного клієнта. Ми пропонуємо інноваційні рішення та підтримку на всіх етапах.</p>
-        </div>
+        @@include('blocks/media-heading/media-heading.html', {
+          "title": "Про нас",
+          "slogan": "Cтараємось для вас",
+          "intro": "RealNET — інтернет-провайдер, що прагне забезпечити швидкий, надійний і стабільний інтернет-зв'язок для кожного клієнта. Ми пропонуємо інноваційні рішення та підтримку на всіх етапах."
+        })
 
         <section class="container  map  map--coverage">
           <div class="map__inner">
@@ -55,11 +55,13 @@
           </div>
         </section>
 
-        @@include('blocks/connected-slider/connected-slider.html')
+        @@include('blocks/tariff-slider/tariff-slider.html')
 
         @@include('blocks/map-addresses/map-addresses.html')
 
         @@include('blocks/text-block-heading/text-block-heading.html')
+
+        @@include('blocks/accordion/accordion.html')
 
       </main>
 
