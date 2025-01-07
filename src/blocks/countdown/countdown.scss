@@ -1,15 +1,62 @@
 .countdown {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //flex-wrap: wrap;
   font-size: inherit;
   font-weight: inherit;
   text-align: center;
-  color: $main-color;
+  color: $text-color;
 
   $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    padding: 24px;
+    //background-color: $secondary-color;
+    box-shadow: 0 2px 9.8px 1px rgba(20, 39, 46, 0.60),
+                0 0 10px 1px rgba(13, 16, 29, 0.50) inset;
+
+    @include border-gradient (
+      1px,
+      $border-radius,
+      $secondary-color,
+      linear-gradient(160deg, #3B6368 5%, #2A4954 22%, #25414B)
+    );
+
+    & + * {
+      margin-top: 24px;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    margin-top: 0 !important;
+    text-align: center;
+
+    &.hidden {
+      display: none;
+    }
+  }
 
   &__inner {
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: $secondary-light;
+    border-radius: $border-radius;
+
+    @media (min-width: $screen-sm) and (max-width: $screen-lg - 1) {
+      padding: 16px 32px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 100%;
+    }
+
+    // @media (min-width: 1366px) {
+    //   padding: 16px 32px;
+    // }
 
     &.hidden {
       display: none;
@@ -17,27 +64,64 @@
   }
 
   &__number {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
 
     &::after {
       display: inline-block;
       vertical-align: baseline;
       content: attr(data-divider);
-      margin-right: 4px;
-      margin-left: 2px;
+      margin-right: 12px;
+      margin-left: 12px;
       font-size: inherit;
       font-weight: inherit;
+      color: $secondary-color;
     }
+
+    &--min {
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    margin-right: 6px;
+    white-space: nowrap;
+    color: $grey-200;
+
+    & > span {
+      display: none;
+
+      @media (min-width: $screen-md) and (max-width: $screen-lg - 1) {
+        display: inline-flex;
+      }
+
+      @media (min-width: 1366px) {
+        display: inline-flex;
+      }
+    }
+  }
+
+  &__time {
+    margin: 0 !important;
+    white-space: nowrap;
   }
 
   &__deadline-message {
     display: none;
-    font-size: inherit;
-    font-weight: 700;
-    color: $color-danger;
+    //font-size: inherit;
+    //font-weight: 700;
+    color: $text-color;
 
     &.visible {
-      display: inline-block;
-      vertical-align: baseline;
+      display: block;
+      width: 100%;
+      text-align: center;
+      //vertical-align: baseline;
     }
   }
 }

@@ -1,0 +1,38 @@
+.map-addresses {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+
+    @media (min-width: 576px) {
+      column-count: 2;
+      column-gap: 16px;
+      column-fill: balance;
+    }
+
+    @media (min-width: $screen-lg) {
+      column-count: 3;
+      column-gap: 18px;
+    }
+  }
+
+  &__list-item {
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    color: $text-color;
+  }
+}

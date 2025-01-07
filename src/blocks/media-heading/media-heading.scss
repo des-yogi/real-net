@@ -1,0 +1,50 @@
+.media-heading {
+  //padding-top: 32px;
+  padding-bottom: 32px;
+
+  @media (min-width: $screen-md) {
+    //padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-lg) {
+    //padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  .section-heading--h1 {
+
+    .section-heading__title,
+    .section-heading__slogan,
+    .section-heading__intro {
+      max-width: none !important;
+    }
+  }
+
+  //&__row {
+    //gap: 16px 0;
+  //}
+
+  &__col-text {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 4, 8, 16px);
+    @include col(lg, 6);
+  }
+
+  &__col-img {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 4, 8, 16px);
+    @include col(lg, 6);
+  }
+
+  &__img {
+    border-radius: $border-radius;
+
+    img {
+      object-fit: cover;
+      object-position: cover;
+    }
+  }
+}

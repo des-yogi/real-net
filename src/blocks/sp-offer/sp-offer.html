@@ -1,0 +1,58 @@
+<!--DEV
+@ @include('blocks/sp-offer/sp-offer.html')
+-->
+
+<article class="container  sp-offer">
+  <div class="row  sp-offer__row">
+
+    <div class="sp-offer__col-article">
+      <div class="sp-offer__article">
+        <div class="embed-responsive sp-offer__img">
+          <picture>
+            <source srcset="img/article-img.webp,
+                            img/article-img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+            <source srcset="img/article-img.jpg,
+                            img/article-img.jpg 2x" media="(min-width: 1280px)">
+              <!-- 862x485, 1290x726 2x -->
+            <source srcset="img/article-img.webp,
+                            img/article-img.webp 2x" media="(min-width: 1024px)" type="image/webp">
+            <source srcset="img/article-img.jpg,
+                            img/article-img.jpg 2x" media="(min-width: 1024px)">
+              <!-- 992x558, 1488x837 2x -->
+            <source srcset="img/article-img.webp" media="(min-width: 768px)" type="image/webp">
+            <source srcset="img/article-img.jpg" media="(min-width: 768px)">
+              <!-- 1110x624 -->
+            <source srcset="img/article-img.webp" media="(min-width: 480px)" type="image/webp">
+            <source srcset="img/article-img.jpg" media="(min-width: 480px)">
+              <!-- 675x380 -->
+            <source srcset="img/article-img.webp" media="(min-width: 320px)" type="image/webp">
+            <source srcset="img/article-img.jpg" media="(min-width: 320px)">
+              <!-- 525x295 -->
+            <img src="img/article-img.jpg" alt="Alt text" width="1488" height="837" loading="eager">
+          </picture>
+        </div>
+
+        <h1 class="sp-offer__title">Акція “3 місяці” вже в дії! Не пропустіть вигідну пропозицію</h1>
+
+        <p>Скористайтеся нашою спеціальною акцією та отримайте знижку на обрані тарифи до кінця місяця! Підключайте швидкісний інтернет зі стабільним з'єднанням та підтримкою 24/7 за зниженою ціною. Це ідеальний шанс оновити свій тариф або підключити інтернет для нової адреси за вигідною ціною.</p>
+
+        <h2>Дійте зараз!</h2>
+        <p>Пропозиція діє лише обмежений час, тому не пропустіть можливість скористатися акцією та забезпечити себе інтернетом, на який ви завжди можете покластися. Залиште заявку вже сьогодні та будьте онлайн без обмежень!</p>
+      </div>
+    </div>
+
+    <div class="sp-offer__col-sidebar">
+      <div class="sp-offer__sidebar">
+
+        <div class="countdown__wrapper">
+          @@include('../../blocks/countdown/countdown.html', {
+            "deadline": "January 31 2025 23:59:59 GMT+0300"
+          })
+        </div>
+
+        @@include('../../blocks/sp-offer-other/sp-offer-other.html')
+      </div>
+    </div>
+
+  </div>
+</article>

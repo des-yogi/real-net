@@ -1,0 +1,57 @@
+.sp-offer {
+  //padding-top: 32px;
+  padding-bottom: 32px;
+
+  @media (min-width: $screen-md) {
+    //padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-lg) {
+    //padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    gap: 40px 0;
+  }
+
+  &__col-article {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 8, 8, 16px);
+    @include col(lg, 8);
+  }
+
+  &__col-sidebar {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 8, 8, 16px);
+    @include col(lg, 4);
+  }
+
+  &__article {
+
+  }
+
+  &__img {
+    border-radius: $border-radius;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__title {
+    margin-top: 24px;
+  }
+
+  &__sidebar {
+
+    @media (min-width: $screen-lg) {
+      position: sticky;
+      top: 24px;
+    }
+  }
+}

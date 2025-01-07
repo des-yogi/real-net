@@ -61,7 +61,12 @@
     "manuals": [],
     "video": [],
     "speedtest": [],
-    "speedtest-widget": []
+    "speedtest-widget": [],
+    "coverage": [],
+    "map-addresses": [],
+    "sp-offer": [],
+    "sp-offer-other": [],
+    "media-heading": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
