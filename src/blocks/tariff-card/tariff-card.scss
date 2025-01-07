@@ -80,13 +80,17 @@
   }
 
   &__options {
-    border-collapse: collapse;
-    width: 100%;
+    //border-collapse: collapse;
+    //width: 100%;
+    table-layout: auto;
     letter-spacing: 0.16px;
+    border: none;
 
     th,
     td {
       padding: 4px 0;
+      vertical-align: baseline;
+      border: none !important;
     }
 
     tr {
@@ -108,6 +112,7 @@
 
     th {
       font-weight: 400;
+      text-align: initial;
       color: $grey-200;
     }
 
