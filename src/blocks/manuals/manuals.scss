@@ -27,4 +27,14 @@
       border-radius: $border-radius;
     }
   }
+
+  &__footer {
+    margin-top: 32px;
+    font-weight: 500;
+    color: $grey-200;
+  }
+
+  &__btn-modal {
+    margin-top: 40px;
+  }
 }

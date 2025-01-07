@@ -12,7 +12,12 @@
 * https://des-yogi.github.io/real-net/housing-estate
 * https://des-yogi.github.io/real-net/special-offers
 * https://des-yogi.github.io/real-net/special-offer-single
-* https://des-yogi.github.io/real-net/
-* https://des-yogi.github.io/real-net/
-
-
+* https://des-yogi.github.io/real-net/about
+* https://des-yogi.github.io/real-net/documents
+* https://des-yogi.github.io/real-net/news
+* https://des-yogi.github.io/real-net/news-single
+* https://des-yogi.github.io/real-net/vacancies
+* https://des-yogi.github.io/real-net/text
+* https://des-yogi.github.io/real-net/management-communication
+* https://des-yogi.github.io/real-net/contacts
+* https://des-yogi.github.io/real-net/error-404

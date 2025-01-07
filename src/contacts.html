@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Контакти</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо наші вибачення, але це ускладнює використання цього сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main class="main">
+
+        <div class="container  section-heading  section-heading--h1">
+          <h1 class="section-heading__title">Контакти</h1>
+          <p class="h1 section-heading__slogan">Надихаючий заголовок</p>
+          <div class="section-heading__intro">
+            <p>Якщо у Вас виникли скарги або побажання, пов'язані з роботою нашої компанії, ви можете написати листа безпосередньо директору Інтернет-провайдера RealNET. Будь-яка інформація буде цінною для нас. Всі ваші листи надійдуть на особисту пошту директора і не пройдуть без уваги.</p>
+          </div>
+        </div>
+
+        @@include('blocks/contacts/contacts.html')
+
+        <div class="container  management-form__wrapper">
+          <div class="row  management-form__row">
+
+            <div class="management-form__col-form">
+              <div class="management-form__inner">
+                <div class="section-heading  section-heading--white  section-heading--news">
+                  <h2 class="section-heading__title">Форма зв’язку</h2>
+                  <p class="h2 section-heading__slogan">Залишай заявку та насолоджуйся швидкістю разом з RealNET</p>
+                </div>
+
+                <form class="order-form" action="#" method="post">
+
+                  <label class="field-text">
+                    <span class="field-text__name">Ваше ім’я<sup>*</sup></span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" name="name" value="" placeholder="Ім’я">
+                      <span class="field-text__help-text" data-error="[[+tv.error.name]]">Пояснение</span>
+                    </span>
+                  </label>
+
+                  <label class="field-text">
+                    <span class="field-text__name">Ваш email<sup>*</sup></span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="email" name="email" value="" placeholder="@mail.com">
+                      <span class="field-text__help-text" data-error="[[+tv.error.email]]"></span>
+                    </span>
+                  </label>
+
+                  <label class="field-text">
+                    <span class="field-text__name">Ваше повідомлення</span>
+                    <span class="field-text__input-wrap">
+                      <textarea class="field-text__input" name="message" rows="4" placeholder="Text placeholder"></textarea>
+                      <span class="field-text__help-text" data-error="[[+tv.error.message]]"></span>
+                    </span>
+                  </label>
+
+
+                  <div class="field-actions">
+                    <!-- <div class="field-actions__text">* — обязательные поля</div> -->
+                    <div class="field-actions__agreement">
+
+                      <div class="field-checkbox" style="margin: 8px 0 40px;">
+                        <label class="field-checkbox__name">
+                          <input class="field-checkbox__input" type="checkbox" name="agreement" checked>
+                          <span class="field-checkbox__name-text">Я погоджуюсь на обробку <a href="#">персональних даних</a></span>
+                        </label>
+                      </div>
+
+                      <div class="order-form__controls">
+                        <div class="order-form__captcha">
+                          <img src="img/reCaptcha.gif" alt="" width="302" height="74" loading="lazy" style="display: block;">
+                        </div>
+                        <div class="field-actions__btn">
+                          <button class="btn" type="submit" name="submit">
+                            <span>Відправити</span>
+                          </button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+
+            <div class="management-form__col-img">
+              <div class="management-form__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48335.46811834096!2d30.490410553443652!3d50.453763365618464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1735290768487!5m2!1sru!2sua" style="width:100%; height:100%; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        @@include('blocks/text-block-heading/text-block-heading.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/mob-nav/mob-nav.html')
+
+  @@include('blocks/modal/modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

@@ -1,40 +1,38 @@
-$line-height:                 1.375em !default;
-$text-color:                  hsl(0, 0%, 10%) !default;
-$border-color:                hsl(0, 0%, 60%) !default;
-
 .pagination {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 18px;
+  //justify-content: center;
+  margin-top: 40px;
   //margin-bottom: 60px;
 
-  @media (min-width: $screen-md) {
-    //justify-content: flex-start;
-    margin-top: 20px;
-  }
+  // @media (min-width: $screen-md) {
+  //   //justify-content: flex-start;
+  //   margin-top: 20px;
+  // }
 
   $block-name:                &; // #{$block-name}__element
 
   &__list {
     display: flex;
     flex-wrap: wrap;
+    gap: 12px;
     list-style: none;
     margin: 0;
     padding-left: 0;
   }
 
   &__item {
-    margin-right: 0.5em;
+    //margin-right: 12px;
 
-    &:last-child {
-      margin-right: 0;
-    }
+    // &:last-child {
+    //   margin-right: 0;
+    // }
 
     &.active {
 
       a {
-        color: $main-color;
+        color: $grey-400;
+        background-color: $text-color;
         pointer-events: none;
       }
     }
@@ -43,7 +41,8 @@ $border-color:                hsl(0, 0%, 60%) !default;
     &--next {
 
       #{$block-name}__link {
-        background-size: 8px 14px;
+        width: 52px;
+        background-size: 16px;
         background-repeat: no-repeat;
         background-position: center;
       }
@@ -54,15 +53,15 @@ $border-color:                hsl(0, 0%, 60%) !default;
 
       #{$block-name}__link {
         transform: scale(-1, 1);
-        background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-color);
+        background-image: svg-load('../blocks/pagination/bg-img/arrow-right.svg', fill=$grey-400);
 
         &:hover,
         &:focus {
-          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$white);
+          background-image: svg-load('../blocks/pagination/bg-img/arrow-right.svg', fill=$grey-400);
         }
 
         &--disabled {
-          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-muted);
+          background-image: svg-load('../blocks/pagination/bg-img/arrow-right.svg', fill=$grey-400);
         }
       }
     }
@@ -71,15 +70,15 @@ $border-color:                hsl(0, 0%, 60%) !default;
       //margin-left: 20px;
 
       #{$block-name}__link {
-        background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-color);
+        background-image: svg-load('../blocks/pagination/bg-img/arrow-right.svg', fill=$grey-400);
 
         &:hover,
         &:focus {
-          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$white);
+          background-image: svg-load('../blocks/pagination/bg-img/arrow-right.svg', fill=$grey-400);
         }
 
         &--disabled {
-          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-muted);
+          background-image: svg-load('../blocks/pagination/bg-img/arrow-right.svg', fill=$grey-400);
         }
       }
     }
@@ -89,29 +88,31 @@ $border-color:                hsl(0, 0%, 60%) !default;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 32px;
+    min-width: 38px;
     height: 32px;
-    font-size: 16px;
+    padding: 0 10px;
+    font-size: $font-size-sm;
     font-weight: 500;
     line-height: 1;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
-    color: $text-muted;
-    background-color: $white;
-    border-radius: 0;
-    transition: all 0.2s ease-out;
+    color: $grey-400;
+    background-color: $main-color;
+    border-radius: $border-radius;
+    transition: all $transition-time;
 
     &:hover,
     &:focus {
       text-decoration: none;
-      color: $white;
-      background-color: $main-color;
+      color: $grey-400;
+      background-color: $main-dark;
     }
 
     &--disabled,
     &:disabled {
-      //background-color: $light-bg;
+      color: $text-muted;
+      background-color: $grey-200;
       pointer-events: none;
     }
   }

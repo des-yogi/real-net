@@ -1,0 +1,41 @@
+.error-404 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    margin-top: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 64px;
+    }
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col-offset(md, 1, 8);
+    @include col(md, 6, 8, 16px);
+    @include col-offset(lg, 2);
+    @include col(lg, 8);
+  }
+
+  &__img {
+    border-radius: $border-radius;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

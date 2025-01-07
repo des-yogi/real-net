@@ -1,0 +1,26 @@
+.docs {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+    gap: 16px 0;
+  }
+
+  &__item {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 4, 8, 16px);
+    @include col(lg, 4);
+  }
+}
