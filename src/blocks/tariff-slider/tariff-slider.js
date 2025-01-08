@@ -47,7 +47,7 @@
         },
         pagination: {
           el: container.closest('.tab-pane').querySelector('.swiper-pagination'),
-          clickable: true,
+          //clickable: true,
         },
         breakpoints: {
           480: {

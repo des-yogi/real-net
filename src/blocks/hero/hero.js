@@ -12,7 +12,7 @@
     },
     pagination: {
       el: '.swiper-pagination',
-      clickable: true,
+      //clickable: true,
     },
     breakpoints: {
       1280: {
