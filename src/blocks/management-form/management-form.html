@@ -82,7 +82,26 @@
     <div class="management-form__col-img">
       <div class="embed-responsive embed-responsive--1-1  management-form__img">
         <picture>
-          <img src="img/img-placeholder.jpg" alt="" width="" height="" loading="lazy">
+          <source srcset="img/img-placeholder.webp,
+                          img/img-placeholder.webp 2x" media="(min-width: 1200px)" type="image/webp">
+          <source srcset="img/img-placeholder.jpg,
+                          img/img-placeholder.jpg 2x" media="(min-width: 1200px)">
+          <!-- 640x640, 924x924 2x -->
+          <source srcset="img/img-placeholder.webp,
+                          img/img-placeholder.webp 2x" media="(min-width: 1024px)" type="image/webp">
+          <source srcset="img/img-placeholder.jpg,
+                          img/img-placeholder.jpg 2x" media="(min-width: 1024px)">
+          <!-- 488x488, 730x730 2x -->
+          <source srcset="img/img-placeholder.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/img-placeholder.jpg" media="(min-width: 768px)">
+          <!-- 540x540 -->
+          <source srcset="img/img-placeholder.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/img-placeholder.jpg" media="(min-width: 480px)">
+          <!-- 668x668 -->
+          <source srcset="img/img-placeholder.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/img-placeholder.jpg" media="(min-width: 320px)">
+          <!-- 515x515 -->
+          <img src="img/img-placeholder.jpg" alt="" width="924" height="924" loading="lazy">
         </picture>
       </div>
     </div>
