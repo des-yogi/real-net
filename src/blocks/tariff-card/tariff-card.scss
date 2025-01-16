@@ -160,6 +160,11 @@
       background-color: $badge-purple;
     }
 
+    &.red {
+      color: $text-color;
+      background-color: $color-danger;
+    }
+
     &.green {
       color: $grey-400;
       background-color: $badge-green;
