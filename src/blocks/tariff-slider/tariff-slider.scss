@@ -239,6 +239,36 @@
     }
   }
 
+  &__link {
+
+    &.active,
+    &--solo {
+
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 47px;
+        right: 0;
+        left: 0;
+        height: 3px;
+        background-color: $main-color;
+        border-radius: 3px 3px 3px 3px;
+      }
+    }
+
+    &--solo {
+
+      &::after {
+        top: 48px;
+        height: 1px;
+        background-color: $grey-200;
+        border-radius: 0;
+      }
+    }
+  }
+
   &--notabs {
 
     #{$block-name}__btn {

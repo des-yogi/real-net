@@ -59,4 +59,37 @@
     text-decoration: line-through;
     color: $grey-200;
   }
+
+  &__label {
+    display: inline-flex;
+    padding: 5px 16px;
+    font-size: $font-size-sm;
+    font-weight: 700;
+    letter-spacing: inherit;
+    border-radius: $border-radius;
+
+    &.purple {
+      color: $text-color;
+      background-color: $badge-purple;
+      box-shadow: 0 0 6px 0 rgba($badge-purple, 0.5);
+    }
+
+    &.red {
+      color: $text-color;
+      background-color: $color-danger;
+      box-shadow: 0 0 6px 0 rgba($color-danger, 0.5);
+    }
+
+    &.green {
+      color: $grey-400;
+      background-color: $badge-green;
+      box-shadow: 0 0 6px 0 rgba($badge-green, 0.5);
+    }
+
+    &.yellow {
+      color: $grey-400;
+      background-color: $badge-yellow;
+      box-shadow: 0 0 6px 0 rgba($badge-yellow, 0.5);
+    }
+  }
 }
