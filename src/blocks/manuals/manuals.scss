@@ -19,7 +19,7 @@
     @include col(md, 8, 8, 16px);
     @include col(lg, 8);
 
-    & > img {
+    img {
       display: block;
       width: 100%;
       max-width: 860px;
