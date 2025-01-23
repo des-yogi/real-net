@@ -97,13 +97,13 @@
     svg {
       width: 24px;
       height: 24px;
-      fill: $main-color;
+      fill: $main-color !important;
     }
 
     &--planned {
 
       svg {
-        fill: $color-danger;
+        fill: $color-danger !important;
       }
     }
   }
