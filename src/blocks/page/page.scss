@@ -32,6 +32,41 @@
   &__footer-wrapper {
     flex-shrink: 0;
   }
+
+  //Firefox only
+  /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-color: $main-color $secondary-light;
+  // color1 (wdtn ползунка) color2 (цвет всего скролбара)
+  scrollbar-width: thin;  /* толщина */
+
+  //for webkit browsers (Chrome, Opera, Safary, Edge ets.)
+  //Here is a complete list of all the new pseudo-elements. All of these pseudo-elements must be prefixed with -webkit-:
+  // scrollbar
+  // scrollbar-button
+  // scrollbar-track
+  // scrollbar-track-piece
+  // scrollbar-thumb
+  // scrollbar-corner
+  // resize
+
+  /* полоса прокрутки (скроллбар) */
+  ::-webkit-scrollbar {
+    width: 6px; /* ширина для вертикального скролла */
+    height: 6px; /* высота для горизонтального скролла */
+    background-color: $secondary-light;
+  }
+
+  /* ползунок скроллбара */
+  ::-webkit-scrollbar-thumb {
+    background-color: $main-color;
+    border-radius: 8px;
+    box-shadow: none;
+    //box-shadow: inset 1px 1px 10px #f3faf7;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: darken($main-color, 5%);
+  }
 }
 
 *,
@@ -273,41 +308,6 @@ a {
   @include col(xxl, 1, $grid-columns, 26px); // XXL (1800 по умолчанию) — 1 из 12, промежутки 26px
 } */
 
-* {
-  //Firefox only
-  /* «цвет ползунка» «цвет полосы скроллбара» */
-  scrollbar-color: $divider-color;
-  scrollbar-width: thin;  /* толщина */
-
-  //for webkit browsers (Chrome, Opera, Safary, Edge ets.)
-  //Here is a complete list of all the new pseudo-elements. All of these pseudo-elements must be prefixed with -webkit-:
-  // scrollbar
-  // scrollbar-button
-  // scrollbar-track
-  // scrollbar-track-piece
-  // scrollbar-thumb
-  // scrollbar-corner
-  // resize
-
-  /* полоса прокрутки (скроллбар) */
-  ::-webkit-scrollbar {
-      width: 6px; /* ширина для вертикального скролла */
-      height: 6px; /* высота для горизонтального скролла */
-      background-color: $divider-color;
-  }
-
-  /* ползунок скроллбара */
-  ::-webkit-scrollbar-thumb {
-    background-color: $main-color;
-    border-radius: 8px;
-    box-shadow: none;
-    //box-shadow: inset 1px 1px 10px #f3faf7;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: darken($main-color, 5%);
-  }
-}
 
 .invisible-scrollbar {
   scrollbar-width: none;

@@ -15,8 +15,8 @@ $field-padding-horizontal:    0.7em !default;
 
   $block-name:                &; // #{$block-name}__element
 
-  margin-top: $line-height;
-  margin-bottom: $line-height;
+  margin-top: #{$line-height}px;
+  margin-bottom: #{$line-height}px;
 
   &__links {
     margin: 0;
